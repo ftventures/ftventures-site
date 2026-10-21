@@ -179,6 +179,9 @@ h3{font-size:18px;font-weight:600}
 .stages .proof{margin-top:auto;padding-top:12px;border-top:1px solid var(--soft);font-family:var(--display);font-weight:600;font-size:14px;color:var(--fg)}
 .interim{margin-top:18px;font-size:16px;color:var(--muted);max-width:none}
 .interim b{color:var(--fg)}
+a.card{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+a.card:hover{transform:translateY(-2px)}
+a.card:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -513,31 +516,30 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <script>
 const portfolio = [
-  {name:"Revolut", sector:"Fintech", status:"Active", logo:"revolut"},
-  {name:"Anthropic", sector:"AI", status:"Active", logo:"anthropic"},
-  {name:"OpenAI", sector:"AI", status:"Active", logo:"openai"},
-  {name:"Perplexity", sector:"AI", status:"Active", logo:"perplexity"},
-  {name:"Neuralink", sector:"Deep tech", status:"Active", logo:"neuralink"},
-  {name:"SpaceX", sector:"Space", status:"Exited", logo:"spacex"},
-  {name:"Axiom Space", sector:"Space", status:"Active"},
-  {name:"Moneybox", sector:"Fintech", status:"Exited", logo:"moneybox"},
-  {name:"Public.com", sector:"Fintech", status:"Active"},
-  {name:"Pacaso", sector:"Proptech", status:"Active"},
-  {name:"What3Words", sector:"Deep tech", status:"Active"},
-  {name:"Wonderschool", sector:"Edtech", status:"Active"},
-  {name:"Heights", sector:"Health", status:"Active"},
-  {name:"Wally Health", sector:"Health", status:"Active"},
-  {name:"Aguulp", sector:"Health", status:"Active"},
-  {name:"Heura", sector:"Food & bev", status:"Active"},
-  {name:"Honestly Tasty", sector:"Food & bev", status:"Active"},
-  {name:"This!", sector:"Food & bev", status:"Active"},
-  {name:"Asarasi", sector:"Food & bev", status:"Active"},
-  {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog"},
-  {name:"Good Club", sector:"Consumer", status:"Active"},
-  {name:"Lick", sector:"Consumer", status:"Active"},
-  {name:"Stojo", sector:"Consumer", status:"Active"},
-  {name:"Cheeky Panda", sector:"Consumer", status:"Active"},
-  {name:"Bloomi", sector:"Consumer", status:"Active"},
+  {name:"Revolut", sector:"Fintech", status:"Active", logo:"revolut", url:"https://www.revolut.com"},
+  {name:"Anthropic", sector:"AI", status:"Active", logo:"anthropic", url:"https://www.anthropic.com"},
+  {name:"OpenAI", sector:"AI", status:"Active", logo:"openai", url:"https://openai.com"},
+  {name:"Perplexity", sector:"AI", status:"Active", logo:"perplexity", url:"https://www.perplexity.ai"},
+  {name:"Neuralink", sector:"Deep tech", status:"Active", logo:"neuralink", url:"https://neuralink.com"},
+  {name:"SpaceX", sector:"Space", status:"Exited", logo:"spacex", url:"https://www.spacex.com"},
+  {name:"Axiom Space", sector:"Space", status:"Active", logo:"axiom", url:"https://www.axiomspace.com"},
+  {name:"Moneybox", sector:"Fintech", status:"Exited", logo:"moneybox", url:"https://www.moneyboxapp.com"},
+  {name:"Public.com", sector:"Fintech", status:"Active", logo:"public", url:"https://public.com"},
+  {name:"Pacaso", sector:"Proptech", status:"Active", logo:"pacaso", url:"https://www.pacaso.com"},
+  {name:"What3Words", sector:"Deep tech", status:"Active", logo:"what3words", url:"https://what3words.com"},
+  {name:"Wonderschool", sector:"Edtech", status:"Active", logo:"wonderschool", url:"https://www.wonderschool.com"},
+  {name:"Heights", sector:"Health", status:"Active", logo:"heights", url:"https://www.yourheights.com"},
+  {name:"Wally Health", sector:"Health", status:"Active", logo:"wally", url:"https://www.carebywally.com"},
+  {name:"Heura", sector:"Food & bev", status:"Active", url:"https://www.heurafoods.com"},
+  {name:"Honestly Tasty", sector:"Food & bev", status:"Active", url:"https://honestlytasty.co.uk"},
+  {name:"This!", sector:"Food & bev", status:"Active", url:"https://this.co"},
+  {name:"Asarasi", sector:"Food & bev", status:"Active", url:"https://asarasi.com"},
+  {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog", url:"https://www.differentdog.com"},
+  {name:"Good Club", sector:"Consumer", status:"Active", url:"https://goodclub.co.uk"},
+  {name:"Lick", sector:"Consumer", status:"Active", url:"https://www.lick.com"},
+  {name:"Stojo", sector:"Consumer", status:"Active", url:"https://stojo.co"},
+  {name:"Cheeky Panda", sector:"Consumer", status:"Active", url:"https://www.cheekypanda.com"},
+  {name:"Bloomi", sector:"Consumer", status:"Active", url:"https://thebloomi.com"},
 ];
 const sectors=[...new Set(portfolio.map(p=>p.sector))].sort();
 const statuses=[...new Set(portfolio.map(p=>p.status))].sort();
@@ -551,7 +553,7 @@ chips(document.getElementById("fStatus"),statuses,()=>fst,v=>fst=v);
 function render(){
   const host=document.getElementById("cards");host.innerHTML="";
   const rows=portfolio.filter(p=>(fs==="All"||p.sector===fs)&&(fst==="All"||p.status===fst));
-  rows.forEach(p=>{const d=document.createElement("div");d.className="card";
+  rows.forEach(p=>{const d=document.createElement("a");d.className="card";d.href=p.url;d.target="_blank";d.rel="noopener";
     d.innerHTML=(p.status==="Exited"?'<span class="tag">Exited</span>':'')+(p.logo?`<img src="img/${p.logo}.png" alt="${p.name}">`:`<span class="co">${p.name}</span>`)+`<span class="sec">${p.sector}</span>`;
     host.appendChild(d);});
   document.getElementById("empty").hidden=rows.length>0;
