@@ -182,6 +182,8 @@ h3{font-size:18px;font-weight:600}
 a.card{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
 a.card:hover{transform:translateY(-2px)}
 a.card:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.card img[src$="/this.png"],.card img[src$="/wonderschool.png"]{height:56px}
+.card img[src$="/heights.png"],.card img[src$="/honestlytasty.png"]{height:40px}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -530,15 +532,11 @@ const portfolio = [
   {name:"Wonderschool", sector:"Edtech", status:"Active", logo:"wonderschool", url:"https://www.wonderschool.com"},
   {name:"Heights", sector:"Health", status:"Active", logo:"heights", url:"https://www.yourheights.com"},
   {name:"Wally Health", sector:"Health", status:"Active", logo:"wally", url:"https://www.carebywally.com"},
-  {name:"Heura", sector:"Food & bev", status:"Active", url:"https://www.heurafoods.com"},
-  {name:"Honestly Tasty", sector:"Food & bev", status:"Active", url:"https://honestlytasty.co.uk"},
-  {name:"This!", sector:"Food & bev", status:"Active", url:"https://this.co"},
-  {name:"Asarasi", sector:"Food & bev", status:"Active", url:"https://asarasi.com"},
+  {name:"Heura", sector:"Food & bev", status:"Active", logo:"heura", url:"https://www.heurafoods.com"},
+  {name:"Honestly Tasty", sector:"Food & bev", status:"Active", logo:"honestlytasty", url:"https://honestlytasty.co.uk"},
+  {name:"This!", sector:"Food & bev", status:"Active", logo:"this", url:"https://this.co"},
   {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog", url:"https://www.differentdog.com"},
-  {name:"Good Club", sector:"Consumer", status:"Active", url:"https://goodclub.co.uk"},
-  {name:"Lick", sector:"Consumer", status:"Active", url:"https://www.lick.com"},
-  {name:"Stojo", sector:"Consumer", status:"Active", url:"https://stojo.co"},
-  {name:"Cheeky Panda", sector:"Consumer", status:"Active", url:"https://www.cheekypanda.com"},
+  {name:"Lick", sector:"Consumer", status:"Active", logo:"lick", url:"https://www.lick.com"},
   {name:"Bloomi", sector:"Consumer", status:"Active", url:"https://thebloomi.com"},
 ];
 const sectors=[...new Set(portfolio.map(p=>p.sector))].sort();
