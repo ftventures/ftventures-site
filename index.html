@@ -70,10 +70,9 @@ h3{font-size:18px;font-weight:600}
 .bul li{padding-left:20px;position:relative;font-family:var(--display);font-size:16px}
 .bul li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--fg)}
 
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border:2px solid var(--line);margin-top:44px}
-.stat{padding:18px 16px;border-right:2px solid var(--line)}
-.stat:last-child{border-right:0}
-@media(max-width:720px){.stat{border-bottom:2px solid var(--line)}.stat:nth-child(2n){border-right:0}.stat:nth-last-child(-n+2){border-bottom:0}}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--line);border:2px solid var(--line);margin-top:44px}
+.stat{padding:18px 16px;background:var(--bg)}
+@media(max-width:720px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
 .stat span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
 
@@ -279,10 +278,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="stats">
     <div class="stat"><b>2</b><span>Exits delivered</span></div>
     <div class="stat"><b>$200M+</b><span>Largest exit</span></div>
-    <div class="stat"><b>$30M+</b><span>Equity raised</span></div>
+    <div class="stat"><b>$30M+</b><span>Raised as CFO</span></div>
     <div class="stat"><b>10×</b><span>ARR growth</span></div>
     <div class="stat"><b>+20%</b><span>EBITDA, from –150%</span></div>
-    <div class="stat"><b>16×</b><span>Angel TVPI</span></div>
+    <div class="stat"><b>$18BN</b><span>M&amp;A transactions</span></div>
+    <div class="stat"><b>$1BN</b><span>Equity transactions</span></div>
+    <div class="stat"><b>$800M</b><span>Debt transactions</span></div>
   </div>
 
   <div class="logos">
