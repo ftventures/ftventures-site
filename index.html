@@ -563,7 +563,7 @@ function render(){
     d.innerHTML=(p.status==="Exited"?'<span class="tag">Exited</span>':'')+`<span class="lgw">`+(p.logo?`<img src="img/${p.logo}.png" alt="${p.name}">`:`<span class="co">${p.name}</span>`)+`</span>`+`<span class="sec">${p.sector}</span>`;
     host.appendChild(d);
     const im=d.querySelector("img");
-    if(im){const fit=()=>{const r=im.naturalWidth/im.naturalHeight||3;im.style.height=Math.max(18,Math.min(54,54/Math.sqrt(r)))+"px";};im.complete?fit():im.addEventListener("load",fit);}
+    if(im){const fit=()=>{const r=im.naturalWidth/im.naturalHeight||3;const k=({perplexity:1.3,wonderschool:1.3,neuralink:1.4,spacex:1.35,openai:1.15,moneybox:1.15})[p.logo]||1;im.style.height=Math.max(18,Math.min(54*k,54/Math.sqrt(r)*k))+"px";if(k>1)im.style.maxWidth="90%";};im.complete?fit():im.addEventListener("load",fit);}
   });
   document.getElementById("empty").hidden=rows.length>0;
 }
