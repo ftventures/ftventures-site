@@ -182,7 +182,8 @@ h3{font-size:18px;font-weight:600}
 a.card{color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
 a.card:hover{transform:translateY(-2px)}
 a.card:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
-.card img[src$="/this.png"],.card img[src$="/wonderschool.png"]{height:56px}
+.card img[src$="/this.png"]{height:46px}
+.card img[src$="/wonderschool.png"]{height:40px}
 .card img[src$="/heights.png"],.card img[src$="/honestlytasty.png"]{height:40px}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
@@ -223,7 +224,7 @@ a.card:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .fbtn{font-family:var(--display);font-size:13px;background:transparent;color:var(--muted);border:1.5px solid var(--soft);padding:5px 12px;border-radius:3px;cursor:pointer}
 .fbtn.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.card{position:relative;background:var(--surface);border:2px solid var(--line);aspect-ratio:1.5;max-width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px 18px;gap:8px}
+.card{min-height:0;overflow:hidden;position:relative;background:var(--surface);border:2px solid var(--line);aspect-ratio:1.5;max-width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px 18px;gap:8px}
 .card img{height:28px;max-width:70%;width:auto;object-fit:contain}
 .card .co{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.6vw,21px);line-height:1.15;text-wrap:balance}
 .card .sec{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
@@ -537,7 +538,7 @@ const portfolio = [
   {name:"This!", sector:"Food & bev", status:"Active", logo:"this", url:"https://this.co"},
   {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog", url:"https://www.differentdog.com"},
   {name:"Lick", sector:"Consumer", status:"Active", logo:"lick", url:"https://www.lick.com"},
-  {name:"Bloomi", sector:"Consumer", status:"Active", url:"https://thebloomi.com"},
+  {name:"Bloomi", sector:"Consumer", status:"Active", logo:"bloomi", url:"https://thebloomi.com"},
 ];
 const sectors=[...new Set(portfolio.map(p=>p.sector))].sort();
 const statuses=[...new Set(portfolio.map(p=>p.status))].sort();
