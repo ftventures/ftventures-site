@@ -189,6 +189,15 @@ a.card:hover img,a.card:focus-visible img,#portfolio .row:hover img{filter:none;
 .row a.rl{display:inline-flex}
 .row a.rl:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .row img.lz{height:34px}
+.who2>a{display:inline-flex;flex:none}
+.who2>a img{width:44px;height:44px;border-radius:50%}
+.who2 span>a{color:inherit;text-decoration:none}
+.who2 span>a:hover{text-decoration:underline}
+.capname{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.capname a{color:inherit;text-decoration:none}
+.capname a:hover{text-decoration:underline}
+.capname a.li{display:inline-flex;color:var(--fg)}
+.capname a.li:hover{opacity:.8}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -271,7 +280,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
     <div class="portrait">
       <img src="img/felipe.jpg" alt="Felipe Tunnell">
-      <div class="cap">Felipe Tunnell<small>Founder · FT Ventures</small><small>British · Spanish · Argentine</small></div>
+      <div class="cap"><div class="capname"><a href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener">Felipe Tunnell</a><a class="li" href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener" aria-label="Felipe Tunnell on LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect width="24" height="24" rx="4" fill="currentColor"/><path d="M7 10h2.6v7.5H7zM8.3 6.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM11.2 10h2.5v1.1c.4-.7 1.3-1.3 2.6-1.3 2.6 0 3 1.7 3 3.9v3.8h-2.6v-3.4c0-.8 0-1.9-1.2-1.9s-1.4.9-1.4 1.8v3.5h-2.6z" fill="var(--bg)"/></svg></a></div><small>Founder · FT Ventures</small><small>British · Spanish · Argentine</small></div>
     </div>
   </div>
 
@@ -426,9 +435,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="sec">
     <h2>What founders say</h2>
     <div class="quotes tq">
-      <figure class="q"><blockquote>“Felipe is an absolute professional growth company and SaaS finance leader with an acute eye for detail and a thorough understanding not just of finance but of the business as well. He was instrumental in creating our financial model and forward-looking SaaS metric projections. I warmly recommend working with him.”</blockquote><figcaption class="who2"><img src="img/sampo.png" alt=""><span>Sampo Parkkinen<small>Founder &amp; CEO, <a href="https://revieve.com/" target="_blank" rel="noopener">Revieve</a></small></span><img class="co" src="img/revieve.png" alt="Revieve"></figcaption></figure>
-      <figure class="q"><blockquote>“Felipe is a pro in finance and fundraising in the startup world and beyond, with a good grasp of how the business can grow and how to invest in its growth. It was a pleasure to work with him on financial planning, Series B fundraising, the company acquisition and lots of growth projects. A truly trustworthy business partner. I highly recommend him to businesses that are starting to scale and adding financial stakeholders.”</blockquote><figcaption class="who2"><img src="img/adelina.png" alt=""><span>Adelina Peltea<small>COO, <a href="https://homerun.co/" target="_blank" rel="noopener">Homerun</a> · VP of Growth, Holded</small></span><span class="cos"><img class="co" src="img/homerun.png" alt="Homerun"><img class="co" src="img/holded.png" alt="Holded"></span></figcaption></figure>
-      <figure class="q"><blockquote>“Best teammate you could hope for if you’re a high-growth startup looking to get your finances in order and raise from VCs. He’s been there and done that from seed, through Series A and B, all the way to an exit.”</blockquote><figcaption class="who2"><img src="img/pablo.png" alt=""><span>Pablo Alcolea<small>CEO, <a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></small></span><img class="co sq" src="img/freshgreens.png" alt="Fresh Greens"></figcaption></figure>
+      <figure class="q"><blockquote>“Felipe is an absolute professional growth company and SaaS finance leader with an acute eye for detail and a thorough understanding not just of finance but of the business as well. He was instrumental in creating our financial model and forward-looking SaaS metric projections. I warmly recommend working with him.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener"><img src="img/sampo.png" alt=""></a><span><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener">Sampo Parkkinen</a><small>Founder &amp; CEO, <a href="https://revieve.com/" target="_blank" rel="noopener">Revieve</a></small></span><img class="co" src="img/revieve.png" alt="Revieve"></figcaption></figure>
+      <figure class="q"><blockquote>“Felipe is a pro in finance and fundraising in the startup world and beyond, with a good grasp of how the business can grow and how to invest in its growth. It was a pleasure to work with him on financial planning, Series B fundraising, the company acquisition and lots of growth projects. A truly trustworthy business partner. I highly recommend him to businesses that are starting to scale and adding financial stakeholders.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener"><img src="img/adelina.png" alt=""></a><span><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener">Adelina Peltea</a><small>COO, <a href="https://homerun.co/" target="_blank" rel="noopener">Homerun</a> · VP of Growth, Holded</small></span><span class="cos"><img class="co" src="img/homerun.png" alt="Homerun"><img class="co" src="img/holded.png" alt="Holded"></span></figcaption></figure>
+      <figure class="q"><blockquote>“Best teammate you could hope for if you’re a high-growth startup looking to get your finances in order and raise from VCs. He’s been there and done that from seed, through Series A and B, all the way to an exit.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/pabloalcolea" target="_blank" rel="noopener"><img src="img/pablo.png" alt=""></a><span><a href="https://www.linkedin.com/in/pabloalcolea" target="_blank" rel="noopener">Pablo Alcolea</a><small>CEO, <a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></small></span><img class="co sq" src="img/freshgreens.png" alt="Fresh Greens"></figcaption></figure>
     </div>
   </div>
 
