@@ -198,6 +198,9 @@ a.card:hover img,a.card:focus-visible img,#portfolio .row:hover img{filter:none;
 .capname a:hover{text-decoration:underline}
 .capname a.li{display:inline-flex;color:var(--fg)}
 .capname a.li:hover{opacity:.8}
+a.ilk{display:inline-flex}
+.portrait a.ilk{display:block}
+a.ilk:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -279,7 +282,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </ul>
     </div>
     <div class="portrait">
-      <img src="img/felipe.jpg" alt="Felipe Tunnell">
+      <a href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener" class="ilk"><img src="img/felipe.jpg" alt="Felipe Tunnell"></a>
       <div class="cap"><div class="capname"><a href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener">Felipe Tunnell</a><a class="li" href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener" aria-label="Felipe Tunnell on LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect width="24" height="24" rx="4" fill="currentColor"/><path d="M7 10h2.6v7.5H7zM8.3 6.2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM11.2 10h2.5v1.1c.4-.7 1.3-1.3 2.6-1.3 2.6 0 3 1.7 3 3.9v3.8h-2.6v-3.4c0-.8 0-1.9-1.2-1.9s-1.4.9-1.4 1.8v3.5h-2.6z" fill="var(--bg)"/></svg></a></div><small>Founder · FT Ventures</small><small>British · Spanish · Argentine</small></div>
     </div>
   </div>
@@ -297,35 +300,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
   <div class="logos">
     <span class="lab">Where I've worked</span>
-    <img src="img/bofa.png" alt="Bank of America Merrill Lynch" class="tall">
-    <img src="img/lepe.png" alt="Lepe Capital" class="tall">
-    <img src="img/holded.png" alt="Holded">
-    <img src="img/homerun.png" alt="Homerun">
-    <img src="img/revieve.png" alt="Revieve">
+    <a href="https://business.bofa.com" target="_blank" rel="noopener" class="ilk"><img src="img/bofa.png" alt="Bank of America Merrill Lynch" class="tall"></a>
+    <a href="https://www.lepepartners.com" target="_blank" rel="noopener" class="ilk"><img src="img/lepe.png" alt="Lepe Capital" class="tall"></a>
+    <a href="https://www.holded.com" target="_blank" rel="noopener" class="ilk"><img src="img/holded.png" alt="Holded"></a>
+    <a href="https://www.homerun.co" target="_blank" rel="noopener" class="ilk"><img src="img/homerun.png" alt="Homerun"></a>
+    <a href="https://www.revieve.com" target="_blank" rel="noopener" class="ilk"><img src="img/revieve.png" alt="Revieve"></a>
   </div>
   <div class="logos">
     <span class="lab">Where I've trained</span>
-    <figure><img src="img/imperial.png" alt="Imperial College London" class="tall"><figcaption>MSc Finance</figcaption></figure>
-    <figure><img src="img/southampton.png" alt="University of Southampton" class="tall"><figcaption>MEng Aerospace Engineering</figcaption></figure>
-    <img src="img/cfa.png" alt="CFA Institute">
-    <img src="img/cisi.png" alt="CISI" class="tall">
+    <figure><a href="https://www.imperial.ac.uk" target="_blank" rel="noopener" class="ilk"><img src="img/imperial.png" alt="Imperial College London" class="tall"></a><figcaption>MSc Finance</figcaption></figure>
+    <figure><a href="https://www.southampton.ac.uk" target="_blank" rel="noopener" class="ilk"><img src="img/southampton.png" alt="University of Southampton" class="tall"></a><figcaption>MEng Aerospace Engineering</figcaption></figure>
+    <a href="https://www.cfainstitute.org" target="_blank" rel="noopener" class="ilk"><img src="img/cfa.png" alt="CFA Institute"></a>
+    <a href="https://www.cisi.org" target="_blank" rel="noopener" class="ilk"><img src="img/cisi.png" alt="CISI" class="tall"></a>
   </div>
 
   <div class="sec">
     <h2>Operator track record</h2>
     <div class="rows">
-      <div class="row"><div class="who"><img src="img/revieve.png" alt="Revieve"><small>CFO · 2022–2026</small></div><div class="what">Enterprise AI &amp; SaaS. Tripled ARR, delivered the first sustained profitability, led the Series B, built EU/US finance infrastructure and moved the business to 99% recurring revenue.</div><div class="num">–150%→+20%</div></div>
-      <div class="row"><div class="who"><img src="img/holded.png" alt="Holded"><small>VP Finance · 2019–2021</small></div><div class="what">B2B SaaS ERP, 100,000+ businesses. Built finance from zero through 20→100+ people, co-led $25M+ across Series A and B, then ran the sell-side to Visma without an advisor.</div><div class="num">$200M+ exit</div></div>
-      <div class="row"><div class="who"><img src="img/homerun.png" alt="Homerun"><small>Fractional CFO · 2021–2024</small></div><div class="what">HR SaaS. Fundraising, bridge financing to extend runway, then the sell-side process to ISH/Strada and post-merger integration through to full-time CFO handover.</div><div class="num">Exit</div></div>
-      <div class="row"><div class="who"><img src="img/koinly.png" alt="Koinly" class="kn"><small>Fractional CFO · 2021–2022</small></div><div class="what">$50M+ ARR consumer fintech, 2M+ users across 140+ countries. Built FP&amp;A and the operating model from scratch ahead of the first institutional round; recruited the Financial Controller.</div><div class="num">$50M+ ARR</div></div>
+      <div class="row"><div class="who"><a href="https://www.revieve.com" target="_blank" rel="noopener" class="ilk"><img src="img/revieve.png" alt="Revieve"></a><small>CFO · 2022–2026</small></div><div class="what">Enterprise AI &amp; SaaS. Tripled ARR, delivered the first sustained profitability, led the Series B, built EU/US finance infrastructure and moved the business to 99% recurring revenue.</div><div class="num">–150%→+20%</div></div>
+      <div class="row"><div class="who"><a href="https://www.holded.com" target="_blank" rel="noopener" class="ilk"><img src="img/holded.png" alt="Holded"></a><small>VP Finance · 2019–2021</small></div><div class="what">B2B SaaS ERP, 100,000+ businesses. Built finance from zero through 20→100+ people, co-led $25M+ across Series A and B, then ran the sell-side to Visma without an advisor.</div><div class="num">$200M+ exit</div></div>
+      <div class="row"><div class="who"><a href="https://www.homerun.co" target="_blank" rel="noopener" class="ilk"><img src="img/homerun.png" alt="Homerun"></a><small>Fractional CFO · 2021–2024</small></div><div class="what">HR SaaS. Fundraising, bridge financing to extend runway, then the sell-side process to ISH/Strada and post-merger integration through to full-time CFO handover.</div><div class="num">Exit</div></div>
+      <div class="row"><div class="who"><a href="https://koinly.io" target="_blank" rel="noopener" class="ilk"><img src="img/koinly.png" alt="Koinly" class="kn"></a><small>Fractional CFO · 2021–2022</small></div><div class="what">$50M+ ARR consumer fintech, 2M+ users across 140+ countries. Built FP&amp;A and the operating model from scratch ahead of the first institutional round; recruited the Financial Controller.</div><div class="num">$50M+ ARR</div></div>
     </div>
   </div>
 
   <div class="sec">
     <h2>Venture capital &amp; investment banking</h2>
     <div class="rows">
-      <div class="row"><div class="who"><img src="img/lepe.png" alt="Lepe Capital"><small>Investment Manager · 2015–2017</small></div><div class="what">Growth-stage VC across European B2B SaaS, marketplaces and consumer. Lead investor and board observer at Festicket; co-led LiveLike's Series B. Portfolio exits include Treatwell to Recruit Holdings (3.75x, 174% IRR).</div><div class="num">VC</div></div>
-      <div class="row"><div class="who"><img src="img/bofa.png" alt="Bank of America Merrill Lynch"><small>Analyst · 2013–2015</small></div><div class="what">Consumer &amp; retail investment banking, $18BN of M&amp;A and financing transactions. Edizione's €3.6BN sale of its World Duty Free stake, Dufry's €700M high-yield financing, Permira's €983M Hugo Boss secondary.</div><div class="num">M&amp;A</div></div>
+      <div class="row"><div class="who"><a href="https://www.lepepartners.com" target="_blank" rel="noopener" class="ilk"><img src="img/lepe.png" alt="Lepe Capital"></a><small>Investment Manager · 2015–2017</small></div><div class="what">Growth-stage VC across European B2B SaaS, marketplaces and consumer. Lead investor and board observer at Festicket; co-led LiveLike's Series B. Portfolio exits include Treatwell to Recruit Holdings (3.75x, 174% IRR).</div><div class="num">VC</div></div>
+      <div class="row"><div class="who"><a href="https://business.bofa.com" target="_blank" rel="noopener" class="ilk"><img src="img/bofa.png" alt="Bank of America Merrill Lynch"></a><small>Analyst · 2013–2015</small></div><div class="what">Consumer &amp; retail investment banking, $18BN of M&amp;A and financing transactions. Edizione's €3.6BN sale of its World Duty Free stake, Dufry's €700M high-yield financing, Permira's €983M Hugo Boss secondary.</div><div class="num">M&amp;A</div></div>
     </div>
   </div>
 
