@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FT Ventures · Felipe Tunnell, Fractional CFO</title>
+<meta name="description" content="Fractional CFO for high-growth, VC- and PE-backed companies. Burn to profitability, fundraise to exit. Two exits, 16x angel TVPI.">
+<meta property="og:title" content="FT Ventures · Felipe Tunnell, Fractional CFO">
+<meta property="og:description" content="Burn to profitability. Fundraise to exit. Two exits as an operator, 16x angel TVPI.">
+<meta property="og:image" content="https://www.ftventures.io/img/og.png">
+<meta property="og:url" content="https://www.ftventures.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: deck-style — cream page, navy rules and boxed rows, section chips, big numerals. Three hash-routed views. */
+:root{
+  --bg:#fdf8e7; --surface:#fffdf4; --fg:#0e1f3c; --muted:#4b5a73; --line:#0e1f3c; --soft:#e9e2cc;
+  --accent:#0b3a12; --accent-ink:#fdf8e7; --chip:#0e1f3c;
+  color-scheme:light;
+  --display:'Outfit',system-ui,sans-serif; --body:'Lora',Georgia,serif; --mono:'DM Mono',ui-monospace,monospace;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:var(--fg)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1060px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+p{max-width:65ch;margin:0}
+img{max-width:100%}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:2px solid var(--line);z-index:5}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.05;text-decoration:none;color:var(--fg);display:flex;align-items:center;gap:10px}
+.brand .mk{background:var(--fg);color:var(--bg);font-weight:700;padding:5px 7px;border-radius:3px;letter-spacing:.02em}
+.brand{font-size:19px}
+.brand img{height:34px;width:auto;display:block}
+.tabs{display:flex;gap:2px;flex-wrap:wrap}
+.tabs a{font-family:var(--display);font-size:14px;font-weight:500;text-decoration:none;color:var(--muted);padding:7px 12px;border:1.5px solid transparent;border-radius:3px}
+.tabs a:hover{color:var(--fg)}
+.tabs a.on{color:var(--fg);border-color:var(--line)}
+.tabs a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+
+section.view{display:none;padding-block:48px 80px}
+section.view.on{display:block}
+.chip{display:inline-flex;font-family:var(--mono);font-size:11px;letter-spacing:.06em;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:28px}
+.chip span{padding:3px 12px}
+.chip span+span{border-left:1.5px solid var(--line);background:var(--chip);color:var(--bg)}
+h1{font-size:clamp(36px,5.4vw,60px);font-weight:600;max-width:20ch}
+.sub{font-family:var(--display);font-weight:500;font-size:clamp(18px,2.2vw,23px);color:var(--fg);margin-top:12px;max-width:40ch;line-height:1.3}
+.lede{font-size:18px;max-width:62ch;color:var(--muted);margin-top:18px}
+h2{font-size:clamp(24px,3vw,32px);font-weight:600}
+h3{font-size:18px;font-weight:600}
+.rule{border:0;border-top:2px solid var(--line);margin:44px 0 0}
+.sec{margin-top:52px}
+
+/* About hero */
+.hero{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.hero>*{min-width:0}
+.portrait{border:2px solid var(--line);padding:8px;background:var(--surface)}
+.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.portrait .cap{font-family:var(--display);font-weight:600;margin-top:10px;font-size:17px}
+.portrait .cap small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.05em;margin-top:2px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.portrait{max-width:300px}}
+.bul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;max-width:62ch}
+.bul li{padding-left:20px;position:relative;font-family:var(--display);font-size:16px}
+.bul li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--fg)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border:2px solid var(--line);margin-top:44px}
+.stat{padding:18px 16px;border-right:2px solid var(--line)}
+.stat:last-child{border-right:0}
+@media(max-width:720px){.stat{border-bottom:2px solid var(--line)}.stat:nth-child(2n){border-right:0}.stat:nth-last-child(-n+2){border-bottom:0}}
+.stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+.stat span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+.logos{display:flex;flex-wrap:wrap;gap:18px 36px;align-items:center;margin-top:28px}
+.logos img{height:26px;width:auto;max-width:150px;object-fit:contain}
+.logos img.tall{height:40px}
+.logos figure{margin:0;display:flex;flex-direction:column;gap:6px}
+.logos figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--muted)}
+.logos .lab{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);width:100%}
+
+.rows{display:grid;gap:10px;margin-top:24px}
+.row{border:2px solid var(--line);background:var(--surface);display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:center;padding:12px 18px}
+.row>*{min-width:0}
+.row .who{font-family:var(--display);font-weight:600;font-size:17px}
+.row .who small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.05em}
+.row .what{font-size:15px;color:var(--muted)}
+.row .num{font-family:var(--display);font-weight:600;font-size:28px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.row img.kn{height:26px}
+.row img{height:24px;width:auto;max-width:140px;object-fit:contain}
+@media(max-width:600px){.row{grid-template-columns:1fr auto}.row .what{grid-column:1/-1}}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.grid2>*{min-width:0}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.kv{list-style:none;padding:0;margin:16px 0 0;border-top:2px solid var(--line)}
+.kv li{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--soft);font-size:15px}
+.kv li>*{min-width:0}
+.kv b{font-family:var(--display);font-weight:600}
+.kv span{color:var(--muted)}
+
+.lab2{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:22px}
+.cities{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+.cities div{border:2px solid var(--line);padding:12px 14px;display:flex;flex-direction:column}
+.cities b{font-family:var(--display);font-weight:600;font-size:17px}
+.cities span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:10px}
+.q{margin:0;border:2px solid var(--line);background:var(--surface);padding:22px;display:flex;flex-direction:column;gap:16px}
+.q blockquote{margin:0;font-family:var(--body);font-style:italic;font-size:16.5px;line-height:1.5}
+.q.lead,.q.lead2{grid-column:1/-1}
+.q.lead2 blockquote{font-size:18px;max-width:70ch}
+.q.lead blockquote{font-family:var(--display);font-style:normal;font-weight:500;font-size:clamp(20px,2.6vw,28px);line-height:1.25;max-width:40ch}
+.q figcaption{font-family:var(--display);font-weight:600;font-size:15px;margin-top:auto}
+.q figcaption small{display:block;font-family:var(--mono);font-weight:400;font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.also{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:16px;max-width:none}
+.who2{display:flex;align-items:center;gap:12px}
+.who2>img:first-child{width:44px;height:44px;border-radius:50%;flex:none}
+.who2 span{flex:1;min-width:0}
+.who2 a{color:inherit}
+.who2 .cos{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none}
+.who2 img.co.sq{height:30px;width:auto;max-width:60px;opacity:1}
+.who2 img.co{height:18px;width:auto;max-width:90px;object-fit:contain;flex:none;opacity:.9}
+.who3{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.who3 span{min-width:0}
+.who3 img.lg{height:22px;width:auto;max-width:120px;object-fit:contain;flex:none}
+.who3 img.sqlg{height:56px;max-width:56px}
+.q.lead .who3 img.lg{height:30px;max-width:150px}
+.who3 img.lg.xr{height:48px;max-width:48px}
+.also2{display:flex;flex-wrap:wrap;align-items:center;gap:14px 30px;margin-top:20px}
+.also2 span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.also2 img{height:20px;width:auto;max-width:140px;object-fit:contain}
+.also2 img.t{height:32px}
+.ceil{margin-bottom:8px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0 6px;align-items:stretch;margin-top:24px}
+.flow>div{min-width:0}
+.flow h3{font-family:var(--display);font-weight:600;font-size:17px;background:var(--fg);color:var(--bg);padding:12px 30px 12px 34px;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%,18px 50%)}
+.flow>div:first-child h3{padding-left:20px;clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%)}
+.flow>div:last-child h3{background:var(--muted)}
+.flow .bul{padding-right:16px}
+.flow .bul{margin-top:14px}
+.ceilnote{font-family:var(--display);font-weight:500;font-size:clamp(19px,2.3vw,24px);line-height:1.3;margin-top:32px;max-width:none}
+@media(max-width:760px){.flow{grid-template-columns:1fr;gap:22px}}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.book{font-family:var(--display);font-weight:600;font-size:16px;background:var(--accent-ink);color:var(--accent);text-decoration:none;padding:12px 20px}
+.book:hover{opacity:.9}
+.book:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+.who3 a,.also2 a{color:inherit;text-decoration:none;display:inline-flex}
+.who3 span a:hover{text-decoration:underline}
+.who3 a:focus-visible,.also2 a:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:22px}
+.cl{border:2px solid var(--line);background:var(--surface);padding:16px;display:flex;flex-direction:column;min-width:0}
+.cllogo{height:40px;display:flex;align-items:center;margin-bottom:10px}
+.cllogo a{display:inline-flex}
+.cllogo img{max-height:36px;max-width:130px;width:auto;object-fit:contain}
+.cllogo img.sm{max-height:26px;max-width:110px}
+.cltxt{font-family:var(--display);font-weight:700;font-size:22px}
+.cl b{font-family:var(--display);font-weight:600;font-size:17px}
+.cl b a{color:inherit;text-decoration:none}
+.cl b a:hover{text-decoration:underline}
+.cl small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:2px 0 0}
+.cl p{font-size:15px;color:var(--muted)}
+.cl p a{color:inherit}
+/* Services */
+.engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
+.engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
+.engage b{display:block;font-family:var(--display);font-weight:600;font-size:19px}
+.engage small{display:block;font-family:var(--mono);font-size:12px;color:var(--muted);margin:4px 0 12px}
+.engage p{font-size:15px;color:var(--muted)}
+.svcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 40px;margin-top:20px;border-top:2px solid var(--line)}
+.svc{padding:18px 0;border-bottom:1px solid var(--soft)}
+.svc h3{margin-bottom:6px}
+.svc p{font-size:15px;color:var(--muted)}
+.fit{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 32px}
+.fit li{font-family:var(--display);font-size:16px;padding:10px 0;border-bottom:1px solid var(--soft);display:flex;gap:10px}
+.fit li::before{content:"→"}
+.cta{margin-top:52px;background:var(--accent);color:var(--accent-ink);padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.cta h3{font-size:22px;color:inherit}
+.cta p{font-size:15px;opacity:.85;color:inherit}
+.email{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:14px;border:1.5px solid currentColor;padding:9px 14px}
+.email button{font-family:var(--display);font-size:13px;background:var(--accent-ink);color:var(--accent);border:0;padding:6px 10px;cursor:pointer;font-weight:600}
+
+/* Portfolio */
+.big{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px;max-width:640px}
+.big div{border:2px solid var(--line);padding:22px 24px}
+.big b{display:block;font-family:var(--display);font-size:clamp(48px,7vw,76px);font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.big span{font-family:var(--display);font-weight:500;font-size:16px;color:var(--muted)}
+@media(max-width:480px){.big{grid-template-columns:1fr}}
+.bench{margin-top:40px}
+.bars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:end;height:220px;margin-top:18px;border-bottom:2px solid var(--line);padding:0 4px}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.bar i{display:block;width:100%;max-width:64px;background:var(--fg);opacity:.85}
+.bar.me i{background:var(--accent);opacity:1}
+.bar b{font-family:var(--display);font-weight:600;font-size:14px;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.labs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:8px 4px 0;font-family:var(--mono);font-size:10px;letter-spacing:.03em;text-align:center;color:var(--muted);line-height:1.3}
+.fn{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:14px}
+.filters{display:flex;gap:24px;flex-wrap:wrap;margin:28px 0 18px}
+.filters>div{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.filters label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.fbtn{font-family:var(--display);font-size:13px;background:transparent;color:var(--muted);border:1.5px solid var(--soft);padding:5px 12px;border-radius:3px;cursor:pointer}
+.fbtn.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.card{position:relative;background:var(--surface);border:2px solid var(--line);aspect-ratio:1.5;max-width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px 18px;gap:8px}
+.card img{height:28px;max-width:70%;width:auto;object-fit:contain}
+.card .co{font-family:var(--display);font-weight:700;font-size:clamp(17px,1.6vw,21px);line-height:1.15;text-wrap:balance}
+.card .sec{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card .tag{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;background:var(--chip);color:var(--bg)}
+.empty{padding:32px 0;color:var(--muted);font-style:italic}
+
+footer{border-top:2px solid var(--line);padding-block:22px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(prefers-reduced-motion:no-preference){section.view.on{animation:fade .2s ease}}
+@keyframes fade{from{opacity:.5}to{opacity:1}}
+</style>
+</head>
+<body>
+
+
+<nav><div class="wrap">
+  <a class="brand" href="#about"><img src="img/ftlogo.png" alt="FT Ventures"></a>
+  <div class="tabs" id="tabs">
+    <a href="#about" data-view="about">About</a>
+    <a href="#services" data-view="services">Fractional CFO</a>
+    <a href="#portfolio" data-view="portfolio">Portfolio</a>
+  </div>
+</div></nav>
+
+<!-- ABOUT -->
+<section class="view" id="about"><div class="wrap">
+  <div class="chip"><span>About</span><span>01</span></div>
+  <div class="hero">
+    <div>
+      <h1>Investor operator.</h1>
+      <p class="sub">Ex-investment banker and VC turned technology CFO, with 12+ years across finance leadership, venture capital and M&amp;A.</p>
+      <ul class="bul">
+        <li>Two exits delivered as an operator, including Spain's largest SaaS exit (Holded, seed to $200M+ in under three years).</li>
+        <li>Tripled ARR and took EBITDA margin from –150% to +20% as CFO at Revieve, an enterprise AI platform serving Boots, CVS, Target and Estée Lauder.</li>
+        <li>$18BN of M&amp;A and financing transactions advised at Bank of America Merrill Lynch; growth-stage investing at Lepe Capital.</li>
+        <li>Active angel investor across 30+ companies, including Revolut, Anthropic and OpenAI, at 16x TVPI.</li>
+      </ul>
+    </div>
+    <div class="portrait">
+      <img src="img/felipe.jpg" alt="Felipe Tunnell">
+      <div class="cap">Felipe Tunnell<small>Founder · FT Ventures</small><small>British · Spanish · Argentine</small></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>2</b><span>Exits delivered</span></div>
+    <div class="stat"><b>$200M+</b><span>Largest exit</span></div>
+    <div class="stat"><b>$30M+</b><span>Equity raised</span></div>
+    <div class="stat"><b>10×</b><span>ARR growth</span></div>
+    <div class="stat"><b>+20%</b><span>EBITDA, from –150%</span></div>
+    <div class="stat"><b>16×</b><span>Angel TVPI</span></div>
+  </div>
+
+  <div class="logos">
+    <span class="lab">Where I've worked</span>
+    <img src="img/bofa.png" alt="Bank of America Merrill Lynch" class="tall">
+    <img src="img/lepe.png" alt="Lepe Capital" class="tall">
+    <img src="img/holded.png" alt="Holded">
+    <img src="img/homerun.png" alt="Homerun">
+    <img src="img/revieve.png" alt="Revieve">
+  </div>
+  <div class="logos">
+    <span class="lab">Where I've trained</span>
+    <figure><img src="img/imperial.png" alt="Imperial College London" class="tall"><figcaption>MSc Finance</figcaption></figure>
+    <figure><img src="img/southampton.png" alt="University of Southampton" class="tall"><figcaption>MEng Aerospace Engineering</figcaption></figure>
+    <img src="img/cfa.png" alt="CFA Institute">
+    <img src="img/cisi.png" alt="CISI" class="tall">
+  </div>
+
+  <div class="sec">
+    <h2>Operator track record</h2>
+    <div class="rows">
+      <div class="row"><div class="who"><img src="img/revieve.png" alt="Revieve"><small>CFO · 2022–2026</small></div><div class="what">Enterprise AI &amp; SaaS. Tripled ARR, delivered the first sustained profitability, led the Series B, built EU/US finance infrastructure and moved the business to 99% recurring revenue.</div><div class="num">–150%→+20%</div></div>
+      <div class="row"><div class="who"><img src="img/holded.png" alt="Holded"><small>VP Finance · 2019–2021</small></div><div class="what">B2B SaaS ERP, 100,000+ businesses. Built finance from zero through 20→100+ people, co-led $25M+ across Series A and B, then ran the sell-side to Visma without an advisor.</div><div class="num">$200M+ exit</div></div>
+      <div class="row"><div class="who"><img src="img/homerun.png" alt="Homerun"><small>Fractional CFO · 2021–2024</small></div><div class="what">HR SaaS. Fundraising, bridge financing to extend runway, then the sell-side process to ISH/Strada and post-merger integration through to full-time CFO handover.</div><div class="num">Exit</div></div>
+      <div class="row"><div class="who"><img src="img/koinly.png" alt="Koinly" class="kn"><small>Fractional CFO · 2021–2022</small></div><div class="what">$50M+ ARR consumer fintech, 2M+ users across 140+ countries. Built FP&amp;A and the operating model from scratch ahead of the first institutional round; recruited the Financial Controller.</div><div class="num">$50M+ ARR</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Venture capital &amp; investment banking</h2>
+    <div class="rows">
+      <div class="row"><div class="who"><img src="img/lepe.png" alt="Lepe Capital"><small>Investment Manager · 2015–2017</small></div><div class="what">Growth-stage VC across European B2B SaaS, marketplaces and consumer. Lead investor and board observer at Festicket; co-led LiveLike's Series B. Portfolio exits include Treatwell to Recruit Holdings (3.75x, 174% IRR).</div><div class="num">VC</div></div>
+      <div class="row"><div class="who"><img src="img/bofa.png" alt="Bank of America Merrill Lynch"><small>Analyst · 2013–2015</small></div><div class="what">Consumer &amp; retail investment banking. Edizione's €3.6BN sale of its World Duty Free stake, Dufry's €700M high-yield financing, Permira's €983M Hugo Boss secondary.</div><div class="num">$18BN</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>On the founder side</h2>
+    <div class="rows">
+      <div class="row"><div class="who">Lazare Farms<small>Co-founder · 2024–2026</small></div><div class="what">A new generation of vertical farming built around proprietary robotics and automation, low capex and viable unit economics. Bootstrapped from prototype to pilot and secured an LOI with Portugal's largest food retailer; wound down in 2026 after failing to close a lead investor. Useful experience of the other side of the table.</div><div class="num">Lisbon</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Geographies</h2>
+    <p class="lede" style="margin-top:8px">Lived and worked in eight cities across Europe and the Gulf, plus US operations and investors.</p>
+    <div class="cities">
+      <div><b>London</b><span>UK</span></div>
+      <div><b>Barcelona</b><span>Spain</span></div>
+      <div><b>Amsterdam</b><span>Netherlands</span></div>
+      <div><b>Helsinki</b><span>Finland</span></div>
+      <div><b>Berlin</b><span>Germany</span></div>
+      <div><b>Lisbon</b><span>Portugal</span></div>
+      <div><b>Basel</b><span>Switzerland</span></div>
+      <div><b>Dubai</b><span>UAE</span></div>
+    </div>
+  </div>
+
+  <div class="sec grid2">
+    <div>
+      <h2>Credentials</h2>
+      <ul class="kv">
+        <li><b>Education</b><span>MEng Aerospace Engineering, First (Southampton, scholarship) · MSc Finance (Imperial, scholarship)</span></li>
+        <li><b>Certifications</b><span>CFA Level I · Certified Advisor, CNMV (CFA Society Spain) · CISI</span></li>
+        <li><b>Teaching</b><span>Lecturer in Finance, INSA Barcelona</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Footprint</h2>
+      <ul class="kv">
+        <li><b>Languages</b><span>English and Spanish (native) · Catalan · German · Russian</span></li>
+        <li><b>Base</b><span>Dubai. Triple national (UK, Spain, Argentina) with EU and UK work authorisation. Internationally mobile.</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- SERVICES -->
+<section class="view" id="services"><div class="wrap">
+  <div class="chip"><span>Fractional CFO</span><span>02</span></div>
+  <h1>Burn to profitability.<br>Fundraise to exit.</h1>
+  <p class="sub">Fractional CFO for high-growth, VC- and PE-backed companies, from B2B SaaS to consumer brands.</p>
+  <p class="lede">I build finance functions, sharpen commercial decision-making and help founders through fundraising, profitability and M&amp;A. Two exits as an operator, and multiple finance functions built from the ground up.</p>
+
+  <div class="sec ceil">
+    <h2>Most growing companies hit the same finance ceiling</h2>
+    <div class="flow">
+      <div><h3>Before</h3><ul class="bul"><li>Founder-led finance</li><li>Ad-hoc models</li><li>Reactive reporting</li><li>Decisions driven by intuition</li><li>Finance seen as “support”</li></ul></div>
+      <div><h3>As you scale</h3><ul class="bul"><li>Board scrutiny increases</li><li>Investors want clarity</li><li>Capital allocation decisions matter</li><li>Weak finance becomes visible very fast</li></ul></div>
+      <div><h3>The problem</h3><ul class="bul"><li>Numbers exist, but aren’t trusted</li><li>Board conversations become defensive</li><li>Metrics don’t reconcile across decks</li><li>Forecasts feel optimistic, not controlled</li><li>The CEO absorbs unnecessary finance load</li></ul></div>
+    </div>
+    <p class="ceilnote">The company has outgrown founder-led finance, but isn’t ready to hire a full-time CFO.</p>
+  </div>
+
+
+  <div class="sec">
+    <h2>Where I'm useful</h2>
+    <div class="svcs">
+      <div class="svc"><h3>Growth has outpaced the finance function</h3><p>Reporting, forecasting and commercial decision-making need to catch up. I set up budgeting, FP&amp;A, treasury, tax, legal and systems, then hand over to a controller I help you hire.</p></div>
+      <div class="svc"><h3>Burn is too high</h3><p>The board wants a credible path to break-even without sacrificing growth. Unit economics, cohorts, pricing and cost architecture.</p></div>
+      <div class="svc"><h3>A fundraise is 6–12 months away</h3><p>The model, materials, data room and process need CFO ownership. $30M+ raised across Series A and B, plus bridge and debt financing.</p></div>
+      <div class="svc"><h3>An exit is on the horizon</h3><p>You need someone who has run a sell-side process in-house: buyer engagement, diligence, negotiation and post-merger integration.</p></div>
+      <div class="svc"><h3>Board and investors need more</h3><p>Board packs, KPI architecture, annual operating plans and long-range planning. Reporting into EU/US shareholders and PE-owned acquirers.</p></div>
+      <div class="svc"><h3>Senior CFO capability, not a full-time CFO</h3><p>Typically post-Series A/B, 2–3 days a week is enough. Remote-first with on-site presence for board meetings, fundraising and critical periods.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>How engagements work</h2>
+    <div class="engage">
+    <div><b>Profitability sprint</b><small>3 months · 2 days/week</small><p>Diagnose burn, rebuild the operating model and establish a board-ready path to break-even.</p></div>
+    <div><b>Fractional CFO</b><small>6–12 months · 2–3 days/week</small><p>Full CFO remit: FP&amp;A, cash, board reporting, fundraising, investor relations, commercial finance and finance operations.</p></div>
+    <div><b>Fundraise &amp; exit</b><small>Scoped per process</small><p>Model, materials, data room, diligence, investor and buyer Q&amp;A, negotiation support, signing and integration.</p></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Selected clients</h2>
+    <div class="clients">
+      <div class="cl"><div class="cllogo"><a href="https://www.keto.swiss" target="_blank" rel="noopener"><img src="img/ketoswiss.png" alt="KetoSwiss"></a></div><b><a href="https://www.keto.swiss" target="_blank" rel="noopener">KetoSwiss</a></b><small>Health brand</small></div>
+      <div class="cl"><div class="cllogo"><a href="https://curvo.ai" target="_blank" rel="noopener"><img src="img/curvo.png" alt="Curvo AI"></a></div><b><a href="https://curvo.ai" target="_blank" rel="noopener">Curvo AI</a></b><small>AI for sales teams</small></div>
+      <div class="cl"><div class="cllogo"><a href="https://homerun.co" target="_blank" rel="noopener"><img src="img/homerun.png" alt="Homerun" class="sm"></a></div><b><a href="https://homerun.co" target="_blank" rel="noopener">Homerun</a></b><small>HR SaaS · Exit</small></div>
+      <div class="cl"><div class="cllogo"><a href="https://koinly.io" target="_blank" rel="noopener"><img src="img/koinly.png" alt="Koinly"></a></div><b><a href="https://koinly.io" target="_blank" rel="noopener">Koinly</a></b><small>Consumer fintech</small></div>
+      <div class="cl"><div class="cllogo"><a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener"><img src="img/freshgreens.png" alt="Fresh Greens"></a></div><b><a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></b><small>Food brand</small></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>What founders say</h2>
+    <div class="quotes tq">
+      <figure class="q"><blockquote>“Felipe is an absolute professional growth company and SaaS finance leader with an acute eye for detail and a thorough understanding not just of finance but of the business as well. He was instrumental in creating our financial model and forward-looking SaaS metric projections. I warmly recommend working with him.”</blockquote><figcaption class="who2"><img src="img/sampo.png" alt=""><span>Sampo Parkkinen<small>Founder &amp; CEO, <a href="https://revieve.com/" target="_blank" rel="noopener">Revieve</a></small></span><img class="co" src="img/revieve.png" alt="Revieve"></figcaption></figure>
+      <figure class="q"><blockquote>“Felipe is a pro in finance and fundraising in the startup world and beyond, with a good grasp of how the business can grow and how to invest in its growth. It was a pleasure to work with him on financial planning, Series B fundraising, the company acquisition and lots of growth projects. A truly trustworthy business partner. I highly recommend him to businesses that are starting to scale and adding financial stakeholders.”</blockquote><figcaption class="who2"><img src="img/adelina.png" alt=""><span>Adelina Peltea<small>COO, <a href="https://homerun.co/" target="_blank" rel="noopener">Homerun</a> · VP of Growth, Holded</small></span><span class="cos"><img class="co" src="img/homerun.png" alt="Homerun"><img class="co" src="img/holded.png" alt="Holded"></span></figcaption></figure>
+      <figure class="q"><blockquote>“Best teammate you could hope for if you’re a high-growth startup looking to get your finances in order and raise from VCs. He’s been there and done that from seed, through Series A and B, all the way to an exit.”</blockquote><figcaption class="who2"><img src="img/pablo.png" alt=""><span>Pablo Alcolea<small>CEO, <a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></small></span><img class="co sq" src="img/freshgreens.png" alt="Fresh Greens"></figcaption></figure>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>What investors and acquirers say</h2>
+    <p class="lede" style="margin-top:8px">Feedback on the data rooms, models and materials I prepared through fundraising and M&amp;A processes.</p>
+    <span class="lab2">Strategic buyers</span>
+    <div class="quotes">
+      <figure class="q lead"><blockquote>“We are very impressed with the materials, the due diligence process and how professionally the company is run for the stage it is at.”</blockquote><figcaption class="who3"><span><a href="https://www.visma.com" target="_blank" rel="noopener">Visma</a><small>Acquirer of Holded · Oslo</small></span><a href="https://www.visma.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-visma.png" alt="Visma"></a></figcaption></figure>
+      <figure class="q lead2"><blockquote>“The material you have been providing has been awesome. I see a lot of information from companies and let me say some of it is not pretty! Financial model is very well laid out and very good. It’s arguably even better than our model.”</blockquote><figcaption class="who3"><span><a href="https://www.xero.com" target="_blank" rel="noopener">Xero</a><small>Strategic · Wellington</small></span><a href="https://www.xero.com" target="_blank" rel="noopener"><img class="lg xr" src="img/fb-xero.png" alt="Xero"></a></figcaption></figure>
+    </div>
+    <span class="lab2">Investors</span>
+    <div class="quotes">
+      <figure class="q"><blockquote>“Nicely done model and presentation, well done! Great first indication when it comes to forming a quality impression of Holded.”</blockquote><figcaption class="who3"><span><a href="https://www.lakestar.com" target="_blank" rel="noopener">Lakestar</a><small>VC · Zurich</small></span><a href="https://www.lakestar.com" target="_blank" rel="noopener"><img class="lg sqlg" src="img/fb-lakestar.png" alt="Lakestar"></a></figcaption></figure>
+      <figure class="q"><blockquote>“A big reason for the Visma acquisition was the quality of materials and documentation at Holded.”</blockquote><figcaption class="who3"><span><a href="https://www.notion.vc" target="_blank" rel="noopener">Notion Capital</a><small>VC · London</small></span><a href="https://www.notion.vc" target="_blank" rel="noopener"><img class="lg" src="img/fb-notion.png" alt="Notion Capital"></a></figcaption></figure>
+      <figure class="q"><blockquote>“Always nice to review data when an ex-banker has processed it.”</blockquote><figcaption class="who3"><span><a href="https://www.leftlane.com" target="_blank" rel="noopener">Left Lane Capital</a><small>VC, ex-IVP team · New York</small></span><a href="https://www.leftlane.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-leftlane.png" alt="Left Lane Capital"></a></figcaption></figure>
+      <figure class="q"><blockquote>“The data room was exceptional, and the presentation was super clean!”</blockquote><figcaption class="who3"><span><a href="https://www.actoncapital.com" target="_blank" rel="noopener">Acton Capital</a><small>VC · Munich</small></span><a href="https://www.actoncapital.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-acton.png" alt="Acton Capital"></a></figcaption></figure>
+      <figure class="q"><blockquote>“Very comprehensive data room and one of the best financial models I have ever reviewed.”</blockquote><figcaption class="who3"><span><a href="https://unitedventures.com" target="_blank" rel="noopener">United Ventures</a><small>VC · Milan</small></span><a href="https://unitedventures.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-united.png" alt="United Ventures"></a></figcaption></figure>
+      <figure class="q"><blockquote>“Extensive materials including a financial plan and a subscribers deck, which helped us a lot.”</blockquote><figcaption class="who3"><span><a href="https://www.eqtventures.com" target="_blank" rel="noopener">EQT Ventures</a><small>VC · Berlin</small></span><a href="https://www.eqtventures.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-eqt.png" alt="EQT Ventures"></a></figcaption></figure>
+      <figure class="q"><blockquote>“The data and presentations that you provided have been really helpful, so thank you.”</blockquote><figcaption class="who3"><span><a href="https://www.addition.com" target="_blank" rel="noopener">Addition</a><small>VC, ex-Tiger Global team · New York</small></span><a href="https://www.addition.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-addition.png" alt="Addition"></a></figcaption></figure>
+      <figure class="q"><blockquote>“Data room is of very high quality.”</blockquote><figcaption class="who3"><span><a href="https://partechpartners.com" target="_blank" rel="noopener">Partech</a><small>VC · Paris</small></span><a href="https://partechpartners.com" target="_blank" rel="noopener"><img class="lg" src="img/fb-partech.png" alt="Partech"></a></figcaption></figure>
+    </div>
+    <div class="also2"><span>Also praised by</span><a href="https://www.commerzventures.com" target="_blank" rel="noopener"><img src="img/fb-commerz.png" alt="Commerz Ventures"></a><a href="https://www.mubadala.com" target="_blank" rel="noopener"><img src="img/fb-mubadala.png" alt="Mubadala" class="t"></a><a href="https://www.nautacapital.com" target="_blank" rel="noopener"><img src="img/fb-nauta.png" alt="Nauta Capital"></a></div>
+  </div>
+
+  <div class="sec">
+    <h2>Best-fit mandates</h2>
+    <ul class="fit">
+      <li>Growth → Profitability</li>
+      <li>Founder-led finance → Institutional finance</li>
+      <li>Transactional revenue → Recurring revenue</li>
+      <li>Fundraising → Exit readiness</li>
+      <li>Standalone → Buy-and-build</li>
+      <li>Lean finance → Scalable strategic finance</li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div><h3>Start with a 30-minute call.</h3><p>Tell me where the business is heading and I'll say plainly whether I can help.</p></div>
+    <div class="ctas"><a class="book" href="https://calendar.app.google/bsmnr5aoWXN63RsX7" target="_blank" rel="noopener">Book a call →</a><div class="email"><span id="em">felipe@ftventures.io</span><button id="copy" type="button">Copy</button></div></div>
+  </div>
+</div></section>
+
+<!-- PORTFOLIO -->
+<section class="view" id="portfolio"><div class="wrap">
+  <div class="chip"><span>Portfolio</span><span>03</span></div>
+  <h1>Investor track record</h1>
+  <p class="sub">30+ early-stage investments since 2017, from frontier AI and fintech to consumer brands and deep tech.</p>
+
+  <div class="big">
+    <div><b>16×</b><span>Net TVPI</span></div>
+    <div><b>51%</b><span>IRR</span></div>
+  </div>
+
+  <div class="bench">
+    <h2>Against the benchmarks</h2>
+    <div class="bars">
+      <div class="bar me"><b>16×</b><i style="height:100%"></i></div>
+      <div class="bar"><b>3.1×</b><i style="height:19%"></i></div>
+      <div class="bar"><b>2.6×</b><i style="height:16%"></i></div>
+      <div class="bar"><b>2.4×</b><i style="height:15%"></i></div>
+      <div class="bar"><b>1.7×</b><i style="height:11%"></i></div>
+      <div class="bar"><b>0.8×</b><i style="height:5%"></i></div>
+    </div>
+    <div class="labs"><span>My angel portfolio</span><span>VC top decile</span><span>S&amp;P 500</span><span>VC top quartile</span><span>VC median</span><span>VC lower quartile</span></div>
+    <p class="fn">Net of fees. Benchmarks: Carta, PitchBook. TVPI and IRR to date; unrealised positions marked to last round.</p>
+  </div>
+
+  <div class="sec">
+    <h2>Selected returns</h2>
+    <div class="rows">
+      <div class="row"><div class="who"><img src="img/revolut.png" alt="Revolut"><small>Series B, 2017</small></div><div class="what">Largest private tech company in Europe. Doubled down in 2021.</div><div class="num">155×</div></div>
+      <div class="row"><div class="who"><img src="img/anthropic.png" alt="Anthropic"><small>2024</small></div><div class="what">Frontier AI lab.</div><div class="num">27×</div></div>
+      <div class="row"><div class="who"><img src="img/openai.png" alt="OpenAI"><small>2024</small></div><div class="what">Frontier AI lab.</div><div class="num">6×</div></div>
+      <div class="row"><div class="who"><img src="img/differentdog.png" alt="Different Dog"><small>Seed, 2020</small></div><div class="what">Fresh dog food. Five consecutive years of revenue doubling.</div><div class="num">5×</div></div>
+      <div class="row"><div class="who"><img src="img/spacex.png" alt="SpaceX"><small>2022 · Exited</small></div><div class="what">Launch and satellite internet. Sold via secondary.</div><div class="num">4×</div></div>
+      <div class="row"><div class="who"><img src="img/neuralink.png" alt="Neuralink"><small>2023</small></div><div class="what">Brain-computer interfaces.</div><div class="num">3×</div></div>
+      <div class="row"><div class="who"><img src="img/moneybox.png" alt="Moneybox"><small>Series C, 2020 · Exited</small></div><div class="what">UK savings and investing app. Three consecutive profitable years.</div><div class="num">3×</div></div>
+      <div class="row"><div class="who"><img src="img/perplexity.png" alt="Perplexity"><small>2024</small></div><div class="what">AI answer engine.</div><div class="num">2×</div></div>
+    </div>
+    <p class="fn">Gross multiples on cost, to date. Unrealised unless marked exited.</p>
+  </div>
+
+  <div class="sec">
+    <h2>All companies</h2>
+    <div class="filters">
+      <div id="fSector"><label>Sector</label></div>
+      <div id="fStatus"><label>Status</label></div>
+    </div>
+    <div class="cards" id="cards"></div>
+    <div class="empty" id="empty" hidden>No companies match those filters.</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 FT Ventures · Operated by Oasis Ventures, UAE</span><span><a href="https://linkedin.com/in/felipetunnell">LinkedIn</a></span></div></footer>
+
+<script>
+const portfolio = [
+  {name:"Revolut", sector:"Fintech", status:"Active", logo:"revolut"},
+  {name:"Anthropic", sector:"AI", status:"Active", logo:"anthropic"},
+  {name:"OpenAI", sector:"AI", status:"Active", logo:"openai"},
+  {name:"Perplexity", sector:"AI", status:"Active", logo:"perplexity"},
+  {name:"Neuralink", sector:"Deep tech", status:"Active", logo:"neuralink"},
+  {name:"SpaceX", sector:"Space", status:"Exited", logo:"spacex"},
+  {name:"Axiom Space", sector:"Space", status:"Active"},
+  {name:"Moneybox", sector:"Fintech", status:"Exited", logo:"moneybox"},
+  {name:"Public.com", sector:"Fintech", status:"Active"},
+  {name:"Pacaso", sector:"Proptech", status:"Active"},
+  {name:"What3Words", sector:"Deep tech", status:"Active"},
+  {name:"Wonderschool", sector:"Edtech", status:"Active"},
+  {name:"Heights", sector:"Health", status:"Active"},
+  {name:"Wally Health", sector:"Health", status:"Active"},
+  {name:"Aguulp", sector:"Health", status:"Active"},
+  {name:"Heura", sector:"Food & bev", status:"Active"},
+  {name:"Honestly Tasty", sector:"Food & bev", status:"Active"},
+  {name:"This!", sector:"Food & bev", status:"Active"},
+  {name:"Asarasi", sector:"Food & bev", status:"Active"},
+  {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog"},
+  {name:"Good Club", sector:"Consumer", status:"Active"},
+  {name:"Lick", sector:"Consumer", status:"Active"},
+  {name:"Stojo", sector:"Consumer", status:"Active"},
+  {name:"Cheeky Panda", sector:"Consumer", status:"Active"},
+  {name:"Bloomi", sector:"Consumer", status:"Active"},
+];
+const sectors=[...new Set(portfolio.map(p=>p.sector))].sort();
+const statuses=[...new Set(portfolio.map(p=>p.status))].sort();
+let fs="All", fst="All";
+function chips(host,list,get,set){
+  ["All",...list].forEach(v=>{const b=document.createElement("button");b.type="button";b.className="fbtn"+(get()===v?" on":"");b.textContent=v;
+    b.onclick=()=>{set(v);[...host.querySelectorAll(".fbtn")].forEach(c=>c.classList.toggle("on",c.textContent===v));render();};host.appendChild(b);});
+}
+chips(document.getElementById("fSector"),sectors,()=>fs,v=>fs=v);
+chips(document.getElementById("fStatus"),statuses,()=>fst,v=>fst=v);
+function render(){
+  const host=document.getElementById("cards");host.innerHTML="";
+  const rows=portfolio.filter(p=>(fs==="All"||p.sector===fs)&&(fst==="All"||p.status===fst));
+  rows.forEach(p=>{const d=document.createElement("div");d.className="card";
+    d.innerHTML=(p.status==="Exited"?'<span class="tag">Exited</span>':'')+(p.logo?`<img src="img/${p.logo}.png" alt="${p.name}">`:`<span class="co">${p.name}</span>`)+`<span class="sec">${p.sector}</span>`;
+    host.appendChild(d);});
+  document.getElementById("empty").hidden=rows.length>0;
+}
+render();
+
+function show(){
+  const id=["about","services","portfolio"].includes(location.hash.slice(1))?location.hash.slice(1):"about";
+  document.querySelectorAll("section.view").forEach(s=>s.classList.toggle("on",s.id===id));
+  document.querySelectorAll("#tabs a").forEach(a=>a.classList.toggle("on",a.dataset.view===id));
+  window.scrollTo({top:0});
+}
+window.addEventListener("hashchange",show);show();
+
+document.getElementById("copy").onclick=function(){
+  const t=document.getElementById("em").textContent,b=this;
+  navigator.clipboard.writeText(t).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1500);})
+  .catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("em"));const s=getSelection();s.removeAllRanges();s.addRange(r);});
+};
+</script>
+
+</body>
+</html>
