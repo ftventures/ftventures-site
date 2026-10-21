@@ -201,6 +201,10 @@ a.card:hover img,a.card:focus-visible img,#portfolio .row:hover img{filter:none;
 a.ilk{display:inline-flex}
 .portrait a.ilk{display:block}
 a.ilk:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.familiar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.familiar p{margin:0;border-left:3px solid var(--fg);padding:4px 0 4px 16px;font-family:var(--body);font-style:italic;font-size:17px;line-height:1.45;max-width:none}
+@media(max-width:900px){.familiar{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.familiar{grid-template-columns:1fr}}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -392,14 +396,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 
   <div class="sec">
-    <h2>Where I'm useful</h2>
-    <div class="svcs">
-      <div class="svc"><h3>Growth has outpaced the finance function</h3><p>Reporting, forecasting and commercial decision-making need to catch up. I set up budgeting, FP&amp;A, treasury, tax, legal and systems, then hand over to a controller I help you hire.</p></div>
-      <div class="svc"><h3>Burn is too high</h3><p>The board wants a credible path to break-even without sacrificing growth. Unit economics, cohorts, pricing and cost architecture.</p></div>
-      <div class="svc"><h3>A fundraise is 6–12 months away</h3><p>The model, materials, data room and process need CFO ownership. $30M+ raised across Series A and B, plus bridge and debt financing.</p></div>
-      <div class="svc"><h3>An exit is on the horizon</h3><p>You need someone who has run a sell-side process in-house: buyer engagement, diligence, negotiation and post-merger integration.</p></div>
-      <div class="svc"><h3>Board and investors need more</h3><p>Board packs, KPI architecture, annual operating plans and long-range planning. Reporting into EU/US shareholders and PE-owned acquirers.</p></div>
-      <div class="svc"><h3>Senior CFO capability, not a full-time CFO</h3><p>Typically post-Series A/B, 2–3 days a week is enough. Remote-first with on-site presence for board meetings, fundraising and critical periods.</p></div>
+    <h2>Sound familiar?</h2>
+    <div class="familiar">
+      <p>“We’re raising in the next 6–12 months and our model isn’t investor-ready.”</p>
+      <p>“We have a year of runway and no credible path to break-even.”</p>
+      <p>“The board keeps asking for numbers we can’t fully stand behind.”</p>
+      <p>“A buyer has been in touch and we’re not ready for diligence.”</p>
     </div>
   </div>
 
