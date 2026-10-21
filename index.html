@@ -165,6 +165,20 @@ h3{font-size:18px;font-weight:600}
 .cl small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:2px 0 0}
 .cl p{font-size:15px;color:var(--muted)}
 .cl p a{color:inherit}
+.diag{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:16px 32px;align-items:center;background:var(--fg);color:var(--bg);padding:24px 26px;margin-top:22px}
+.diag h3{color:var(--bg);font-size:21px;margin-top:6px}
+.diag small{display:block;font-family:var(--mono);font-size:12px;opacity:.8;margin-top:4px}
+.diag p{font-size:16px;opacity:.92;max-width:60ch}
+.dtag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid currentColor;padding:2px 8px;border-radius:999px}
+@media(max-width:640px){.diag{grid-template-columns:1fr}}
+.stages{margin-top:16px}
+.stages>div{display:flex;flex-direction:column}
+.stages ul{list-style:none;padding:0;margin:4px 0 16px;display:grid;gap:7px}
+.stages li{font-size:15px;color:var(--muted);padding-left:16px;position:relative}
+.stages li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;background:var(--fg);border-radius:50%}
+.stages .proof{margin-top:auto;padding-top:12px;border-top:1px solid var(--soft);font-family:var(--display);font-weight:600;font-size:14px;color:var(--fg)}
+.interim{margin-top:18px;font-size:16px;color:var(--muted);max-width:none}
+.interim b{color:var(--fg)}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -365,11 +379,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
   <div class="sec">
     <h2>How engagements work</h2>
-    <div class="engage">
-    <div><b>Profitability sprint</b><small>3 months · 2 days/week</small><p>Diagnose burn, rebuild the operating model and establish a board-ready path to break-even.</p></div>
-    <div><b>Fractional CFO</b><small>6–12 months · 2–3 days/week</small><p>Full CFO remit: FP&amp;A, cash, board reporting, fundraising, investor relations, commercial finance and finance operations.</p></div>
-    <div><b>Fundraise &amp; exit</b><small>Scoped per process</small><p>Model, materials, data room, diligence, investor and buyer Q&amp;A, negotiation support, signing and integration.</p></div>
+    <p class="lede" style="margin-top:8px">Start with a two-week diagnostic, then work together at the stage you're at.</p>
+    <div class="diag">
+      <div><span class="dtag">Start here</span><h3>Finance diagnostic</h3><small>2 weeks · fixed fee</small></div>
+      <p>A hands-on review of your cash, model, reporting and KPIs, ending in a written 90-day plan with clear priorities. No commitment beyond it.</p>
     </div>
+    <div class="engage stages">
+      <div><b>Raise-ready</b><small>Before a round · seed to Series B</small>
+        <ul><li>Investor-grade model and scenarios</li><li>Metrics that reconcile across every deck</li><li>Data room and diligence prep</li><li>Process, investor Q&amp;A and term sheet support</li></ul>
+        <p class="proof">$30M+ raised across Series A and B</p></div>
+      <div><b>Scale-ready</b><small>After a round · 1–3 days/week</small>
+        <ul><li>Monthly board pack and KPI dashboard</li><li>Rolling forecast and 13-week cash view</li><li>Unit economics and a path to profitability</li><li>Finance team, systems and controls built to hand over</li></ul>
+        <p class="proof">Revieve: –150% → +20% EBITDA while tripling ARR</p></div>
+      <div><b>Exit-ready</b><small>12–24 months before a sale</small>
+        <ul><li>Buyer-ready numbers and data room</li><li>Sell-side process and diligence management</li><li>SPA negotiation support</li><li>Post-merger integration</li></ul>
+        <p class="proof">Holded: $200M+ exit to Visma · Homerun: sold to ISH</p></div>
+    </div>
+    <p class="interim">Need someone close to full-time? <b>Interim CFO</b> cover for 3–9 months, including handover to a permanent hire.</p>
   </div>
 
   <div class="sec">
