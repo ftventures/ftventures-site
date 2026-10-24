@@ -208,6 +208,29 @@ a.ilk:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .svcs.svc4{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px}
 @media(max-width:900px){.svcs.svc4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.svcs.svc4{grid-template-columns:1fr}}
+.cs-eye{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cs-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:6px}
+.cs-role{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cs-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;background:var(--line);border:2px solid var(--line);margin-top:22px}
+.cs-stats div{background:var(--bg);padding:16px}
+.cs-stats b{display:block;font-family:var(--display);font-weight:600;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.cs-stats span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.cs-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;margin-top:30px}
+.cs h3{font-family:var(--display);font-weight:600;font-size:18px;margin-bottom:12px}
+.cs-tl{border-left:2px solid var(--fg);padding-left:16px;display:grid;gap:12px;font-size:15.5px;line-height:1.5}
+.cs-tl i{font-style:normal;font-family:var(--mono);font-size:12.5px}
+.cs-tl i.hl{color:#B07D2C}
+.cs-tl b{font-family:var(--display);font-weight:600}
+.cs-bars{display:flex;align-items:flex-end;gap:16px;height:170px;border-bottom:2px solid var(--fg);padding:0 6px}
+.cs-bars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.cs-bars b{font-family:var(--display);font-weight:600;font-size:14px;margin-bottom:4px}
+.cs-bars i{display:block;width:100%;max-width:90px;background:var(--fg)}
+.cs-labs{display:flex;gap:16px;padding:6px 6px 0;font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center}
+.cs-labs span{flex:1}
+.cs-note{font-family:var(--mono);font-size:11px;color:#B07D2C;margin-top:8px}
+.cs-role-block{margin-top:28px;border-top:1px solid var(--soft);padding-top:18px}
+.cs-role-block p{font-size:16px;color:var(--muted);max-width:75ch}
+@media(max-width:760px){.cs-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cs-grid{grid-template-columns:1fr;gap:28px}}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -437,6 +460,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="cl"><div class="cllogo"><a href="https://homerun.co" target="_blank" rel="noopener"><img src="img/homerun.png" alt="Homerun" class="sm"></a></div><b><a href="https://homerun.co" target="_blank" rel="noopener">Homerun</a></b><small>HR SaaS · Exit</small></div>
       <div class="cl"><div class="cllogo"><a href="https://koinly.io" target="_blank" rel="noopener"><img src="img/koinly.png" alt="Koinly"></a></div><b><a href="https://koinly.io" target="_blank" rel="noopener">Koinly</a></b><small>Consumer fintech</small></div>
       <div class="cl"><div class="cllogo"><a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener"><img src="img/freshgreens.png" alt="Fresh Greens"></a></div><b><a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></b><small>Food brand</small></div>
+    </div>
+  </div>
+
+  <div class="sec cs">
+    <div class="cs-eye">Case study</div>
+    <div class="cs-head"><h2>Holded: seed-stage to acquisition by Visma</h2><span class="cs-role">VP Finance · 2019–2021</span></div>
+    <div class="cs-stats">
+      <div><b>$25M+</b><span>Raised</span></div>
+      <div><b>20→100+</b><span>Team</span></div>
+      <div><b>100,000+</b><span>Customers</span></div>
+      <div><b>$200M+</b><span>Exit to Visma</span></div>
+    </div>
+    <div class="cs-grid">
+      <div>
+        <h3>Timeline</h3>
+        <div class="cs-tl">
+          <div><i>2018</i> · €1.6M seed led by Nauta. 10k users.</div>
+          <div><i class="hl">2019</i> · <b>Felipe joins as VP Finance.</b> €6M Series A led by Lakestar.</div>
+          <div><i>2021</i> · €15M Series B led by Elaia. Expansion to France.</div>
+          <div><i>2021</i> · Acquired by Visma, one of Spain's largest SaaS exits. Sell-side run in-house, without an adviser.</div>
+        </div>
+      </div>
+      <div>
+        <h3>Capital raised</h3>
+        <div class="cs-bars">
+          <div><b>€1.6M</b><i style="height:7%;background:var(--muted)"></i></div>
+          <div><b>€7.6M</b><i style="height:33%"></i></div>
+          <div><b>€22.6M</b><i style="height:95%"></i></div>
+        </div>
+        <div class="cs-labs"><span>Seed</span><span>Series A</span><span>Series B</span></div>
+        <div class="cs-note">Cumulative · navy = raised with Felipe as VP Finance</div>
+      </div>
+    </div>
+    <div class="cs-role-block">
+      <h3>My role</h3>
+      <p>Built the finance function from zero. Led FP&amp;A, fundraising and investor relations through the Series A and B, then ran the sale process to Visma end to end, including diligence, negotiation and integration.</p>
     </div>
   </div>
 
