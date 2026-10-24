@@ -231,6 +231,14 @@ a.ilk:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .cs-role-block{margin-top:28px;border-top:1px solid var(--soft);padding-top:18px}
 .cs-role-block p{font-size:16px;color:var(--muted);max-width:75ch}
 @media(max-width:760px){.cs-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cs-grid{grid-template-columns:1fr;gap:28px}}
+.cs-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.cs-tl-wrap{flex:1;min-width:0}
+.cs-head h2 a{color:inherit;text-decoration:none}
+.cs-head h2 a:hover{text-decoration:underline}
+.cs-logo{display:inline-flex;flex:none;border:2px solid var(--line);padding:12px 16px;background:var(--surface)}
+.cs-logo img{height:34px;width:auto;display:block}
+.cs-logo:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+@media(max-width:600px){.cs-top{flex-direction:column-reverse;gap:14px}.cs-logo{padding:8px 10px}.cs-logo img{height:22px}}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -464,8 +472,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 
   <div class="sec cs">
-    <div class="cs-eye">Case study</div>
-    <div class="cs-head"><h2>Holded: seed-stage to acquisition by Visma</h2><span class="cs-role">VP Finance · 2019–2021</span></div>
+    <div class="cs-top">
+      <div class="cs-tl-wrap">
+        <div class="cs-eye">Case study</div>
+        <div class="cs-head"><h2><a href="https://www.holded.com" target="_blank" rel="noopener">Holded</a>: seed-stage to acquisition by Visma</h2><span class="cs-role">VP Finance · 2019–2021</span></div>
+      </div>
+      <a class="cs-logo" href="https://www.holded.com" target="_blank" rel="noopener"><img src="img/holded.png" alt="Holded"></a>
+    </div>
     <div class="cs-stats">
       <div><b>$25M+</b><span>Raised</span></div>
       <div><b>20→100+</b><span>Team</span></div>
@@ -503,7 +516,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <h2>What founders say</h2>
     <div class="quotes tq">
       <figure class="q"><blockquote>“Felipe is an absolute professional growth company and SaaS finance leader with an acute eye for detail and a thorough understanding not just of finance but of the business as well. He was instrumental in creating our financial model and forward-looking SaaS metric projections. I warmly recommend working with him.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener"><img src="img/sampo.png" alt=""></a><span><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener">Sampo Parkkinen</a><small>Founder &amp; CEO, <a href="https://revieve.com/" target="_blank" rel="noopener">Revieve</a></small></span><img class="co" src="img/revieve.png" alt="Revieve"></figcaption></figure>
-      <figure class="q"><blockquote>“Felipe is a pro in finance and fundraising in the startup world and beyond, with a good grasp of how the business can grow and how to invest in its growth. It was a pleasure to work with him on financial planning, Series B fundraising, the company acquisition and lots of growth projects. A truly trustworthy business partner. I highly recommend him to businesses that are starting to scale and adding financial stakeholders.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener"><img src="img/adelina.png" alt=""></a><span><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener">Adelina Peltea</a><small>COO, <a href="https://homerun.co/" target="_blank" rel="noopener">Homerun</a> · VP of Growth, Holded</small></span><span class="cos"><img class="co" src="img/homerun.png" alt="Homerun"><img class="co" src="img/holded.png" alt="Holded"></span></figcaption></figure>
+      <figure class="q"><blockquote>“Felipe is a pro in finance and fundraising in the startup world and beyond, with a good grasp of how the business can grow and how to invest in its growth. It was a pleasure to work with him on financial planning, Series B fundraising, the company acquisition and lots of growth projects. A truly trustworthy business partner. I highly recommend him to businesses that are starting to scale and adding financial stakeholders.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener"><img src="img/adelina.png" alt=""></a><span><a href="https://www.linkedin.com/in/adelinapeltea" target="_blank" rel="noopener">Adelina Peltea</a><small>COO, <a href="https://homerun.co/" target="_blank" rel="noopener">Homerun</a> · VP of Growth, <a href="https://www.holded.com" target="_blank" rel="noopener">Holded</a></small></span><span class="cos"><img class="co" src="img/homerun.png" alt="Homerun"><img class="co" src="img/holded.png" alt="Holded"></span></figcaption></figure>
       <figure class="q"><blockquote>“Best teammate you could hope for if you’re a high-growth startup looking to get your finances in order and raise from VCs. He’s been there and done that from seed, through Series A and B, all the way to an exit.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/pabloalcolea" target="_blank" rel="noopener"><img src="img/pablo.png" alt=""></a><span><a href="https://www.linkedin.com/in/pabloalcolea" target="_blank" rel="noopener">Pablo Alcolea</a><small>CEO, <a href="https://www.instagram.com/freshgreens.es/" target="_blank" rel="noopener">Fresh Greens</a></small></span><img class="co sq" src="img/freshgreens.png" alt="Fresh Greens"></figcaption></figure>
     </div>
   </div>
