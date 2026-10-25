@@ -243,6 +243,34 @@ a.ilk:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
 .cs-headline{font-family:var(--body);font-size:16px;margin-top:10px}
 .cs-headline .cs-role{color:var(--muted)}
 @media(max-width:600px){.cs-card{padding:18px}.cs-top{flex-direction:column;align-items:flex-start;gap:14px}.cs-logo img{height:32px}}
+
+/* ===== interactive layer ===== */
+[hidden]{display:none!important}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+.bars{position:relative;margin-top:40px!important}
+.bar i{transform-origin:bottom;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .bars:not(.drawn) .bar i{transform:scaleY(0)}
+.js .bars:not(.drawn) .bar b{opacity:0}
+.bar b{transition:opacity .4s ease .6s}
+.bar{position:relative;cursor:default}
+.bar:hover i{filter:brightness(1.15)}
+.tip{position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%) translateY(4px);background:var(--fg);color:var(--bg);font-family:var(--mono);font-size:11px;line-height:1.4;padding:8px 10px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s,transform .15s;z-index:3}
+.tip::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--fg)}
+.bar:hover .tip,.bar:focus-visible .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+.bar.me .tip{background:var(--accent)}.bar.me .tip::after{border-top-color:var(--accent)}
+.card{overflow:hidden;transition:border-color .15s,transform .35s ease,opacity .3s ease}
+.card.out{opacity:0;transform:scale(.96);pointer-events:none}
+.book{display:inline-block;transition:transform .25s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.tabs{align-items:center}
+.tabs a.navcta{margin-left:10px;background:var(--fg);color:var(--bg);border-color:var(--fg);font-weight:600}
+.tabs a.navcta:hover{opacity:.9;color:var(--bg)}
+.herocta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+.herocta .book{background:var(--fg);color:var(--bg)}
+.herocta .howlink{font-family:var(--display);font-weight:600;font-size:15px;color:var(--fg);text-decoration:none;border-bottom:1.5px solid var(--fg);padding-bottom:2px}
+.herocta .howlink:hover{opacity:.75}
+@media(max-width:600px){.tabs a.navcta{display:none}}
 /* Services */
 .engage{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
 .engage div{border:2px solid var(--line);background:var(--surface);padding:22px}
@@ -296,9 +324,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media(prefers-reduced-motion:no-preference){section.view.on{animation:fade .2s ease}}
 @keyframes fade{from{opacity:.5}to{opacity:1}}
 </style>
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-
 
 <nav><div class="wrap">
   <a class="brand" href="#about"><img src="img/ftlogo.png" alt="FT Ventures"></a>
@@ -306,6 +334,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="#about" data-view="about">About</a>
     <a href="#services" data-view="services">Fractional CFO</a>
     <a href="#portfolio" data-view="portfolio">Portfolio</a>
+    <a class="navcta" href="https://www.ftventures.io/call" target="_blank" rel="noopener">Book a call</a>
   </div>
 </div></nav>
 
@@ -322,6 +351,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <li>$18BN of M&amp;A and financing transactions advised at Bank of America Merrill Lynch; growth-stage investing at Lepe Capital.</li>
         <li>Active angel investor across 40+ companies, including Revolut, Anthropic and OpenAI, at 16x TVPI.</li>
       </ul>
+      <div class="herocta"><a class="book" href="https://www.ftventures.io/call" target="_blank" rel="noopener">Book a call →</a><a class="howlink" href="#services">How I work →</a></div>
     </div>
     <div class="portrait">
       <a href="https://www.linkedin.com/in/felipetunnell" target="_blank" rel="noopener" class="ilk"><img src="img/felipe.jpg" alt="Felipe Tunnell"></a>
@@ -329,7 +359,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="stats">
+  <div class="stats rv">
     <div class="stat"><b>2</b><span>Exits delivered</span></div>
     <div class="stat"><b>$200M+</b><span>Largest exit</span></div>
     <div class="stat"><b>$50M+</b><span>ARR operating scale</span></div>
@@ -340,7 +370,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="stat"><b>16×</b><span>Portfolio TVPI</span></div>
   </div>
 
-  <div class="logos">
+  <div class="logos rv">
     <span class="lab">Where I've worked</span>
     <a href="https://business.bofa.com" target="_blank" rel="noopener" class="ilk"><img src="img/bofa.png" alt="Bank of America Merrill Lynch" class="tall"></a>
     <a href="https://www.crunchbase.com/organization/lepe-partners" target="_blank" rel="noopener" class="ilk"><img src="img/lepe.png" alt="Lepe Capital" class="tall"></a>
@@ -348,7 +378,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="https://www.homerun.co" target="_blank" rel="noopener" class="ilk"><img src="img/homerun.png" alt="Homerun"></a>
     <a href="https://www.revieve.com" target="_blank" rel="noopener" class="ilk"><img src="img/revieve.png" alt="Revieve"></a>
   </div>
-  <div class="logos">
+  <div class="logos rv">
     <span class="lab">Where I've trained</span>
     <figure><a href="https://www.imperial.ac.uk" target="_blank" rel="noopener" class="ilk"><img src="img/imperial.png" alt="Imperial College London" class="tall"></a><figcaption>MSc Finance</figcaption></figure>
     <figure><a href="https://www.southampton.ac.uk" target="_blank" rel="noopener" class="ilk"><img src="img/southampton.png" alt="University of Southampton" class="tall"></a><figcaption>MEng Aerospace Engineering</figcaption></figure>
@@ -356,7 +386,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a href="https://www.cisi.org" target="_blank" rel="noopener" class="ilk"><img src="img/cisi.png" alt="CISI" class="tall"></a>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Operator track record</h2>
     <div class="rows">
       <div class="row"><div class="who"><a href="https://www.revieve.com" target="_blank" rel="noopener" class="ilk"><img src="img/revieve.png" alt="Revieve"></a><small>CFO · 2022–2026</small></div><div class="what">Enterprise AI &amp; SaaS. Tripled ARR, delivered the first sustained profitability, led the Series B, built EU/US finance infrastructure and moved the business to 99% recurring revenue.</div><div class="num">–150%→+20%</div></div>
@@ -366,7 +396,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Venture capital &amp; investment banking</h2>
     <div class="rows">
       <div class="row"><div class="who"><a href="https://www.crunchbase.com/organization/lepe-partners" target="_blank" rel="noopener" class="ilk"><img src="img/lepe.png" alt="Lepe Capital"></a><small>Investment Manager · 2015–2017</small></div><div class="what">Growth-stage VC across European B2B SaaS, marketplaces and consumer. Lead investor and board observer at Festicket; co-led LiveLike's Series B. Portfolio exits include Treatwell to Recruit Holdings (3.75x, 174% IRR).</div><div class="num">VC</div></div>
@@ -374,14 +404,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>On the founder side</h2>
     <div class="rows">
       <div class="row"><div class="who"><a href="https://lazarefarms.com/" target="_blank" rel="noopener" class="ilk"><img src="img/lazare.png" alt="Lazare Farms" class="lz"></a><small>Co-founder · 2024–2026</small></div><div class="what">A new generation of vertical farming built around proprietary robotics and automation, low capex and viable unit economics. Bootstrapped from prototype to pilot and signed an LOI with Portugal's largest food retailer. Wound down in 2026 as investment into vertical farming dried up across the sector.</div><div class="num">Founder</div></div>
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Geographies</h2>
     <p class="lede" style="margin-top:8px">Lived and worked in eight cities across Europe and the Gulf, plus US operations and investors.</p>
     <div class="cities">
@@ -396,7 +426,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec grid2">
+  <div class="sec rv grid2">
     <div>
       <h2>Credentials</h2>
       <ul class="kv">
@@ -422,7 +452,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <p class="sub">Fractional CFO for high-growth, VC- and PE-backed companies, from B2B SaaS to consumer brands.</p>
   <p class="lede">I build finance functions, sharpen commercial decision-making and help founders through fundraising, profitability and M&amp;A. Two exits as an operator, and multiple finance functions built from the ground up.</p>
 
-  <div class="sec ceil">
+  <div class="sec rv ceil">
     <h2>Most growing companies hit the same finance ceiling</h2>
     <div class="flow">
       <div><h3>Before</h3><ul class="bul"><li>Founder-led finance</li><li>Ad-hoc models</li><li>Reactive reporting</li><li>Decisions driven by intuition</li><li>Finance seen as “support”</li></ul></div>
@@ -433,7 +463,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Where I can help</h2>
     <div class="svcs svc4">
       <div class="svc"><h3>Burn is too high</h3><p>The board wants a credible path to break-even without sacrificing growth.</p></div>
@@ -443,7 +473,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>How engagements work</h2>
     <p class="lede" style="margin-top:8px">Start with a two-week diagnostic, then work together at the stage you're at.</p>
     <div class="diag">
@@ -464,7 +494,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <p class="interim">Need someone close to full-time? <b>Interim CFO</b> cover for 3–9 months, including handover to a permanent hire.</p>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Selected clients</h2>
     <div class="clients">
       <div class="cl"><div class="cllogo"><a href="https://www.brainritual.com" target="_blank" rel="noopener"><img src="img/ketoswiss.png" alt="KetoSwiss"></a></div><b><a href="https://www.brainritual.com" target="_blank" rel="noopener">KetoSwiss</a></b><small>Health brand</small></div>
@@ -475,7 +505,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec cs">
+  <div class="sec rv cs">
     <h2>Case study</h2>
     <div class="cs-card">
     <div class="cs-top">
@@ -520,7 +550,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>What founders say</h2>
     <div class="quotes tq">
       <figure class="q"><blockquote>“Felipe is an absolute professional growth company and SaaS finance leader with an acute eye for detail and a thorough understanding not just of finance but of the business as well. He was instrumental in creating our financial model and forward-looking SaaS metric projections. I warmly recommend working with him.”</blockquote><figcaption class="who2"><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener"><img src="img/sampo.png" alt=""></a><span><a href="https://www.linkedin.com/in/sampo-parkkinen-b3262a6" target="_blank" rel="noopener">Sampo Parkkinen</a><small>Founder &amp; CEO, <a href="https://revieve.com/" target="_blank" rel="noopener">Revieve</a></small></span><img class="co" src="img/revieve.png" alt="Revieve"></figcaption></figure>
@@ -529,7 +559,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>What investors and acquirers say</h2>
     <p class="lede" style="margin-top:8px">Feedback on the data rooms, models and materials I prepared through fundraising and M&amp;A processes.</p>
     <span class="lab2">Strategic buyers</span>
@@ -552,7 +582,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="also2"><span>Also praised by</span><a href="https://www.commerzventures.com" target="_blank" rel="noopener"><img src="img/fb-commerz.png" alt="Commerz Ventures"></a><a href="https://www.nautacapital.com" target="_blank" rel="noopener"><img src="img/fb-nauta.png" alt="Nauta Capital"></a></div>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Best-fit mandates</h2>
     <ul class="fit">
       <li>Growth → Profitability</li>
@@ -564,7 +594,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </ul>
   </div>
 
-  <div class="cta">
+  <div class="cta rv">
     <div><h3>Start with a 30-minute call.</h3><p>Tell me where the business is heading and I'll say plainly whether I can help.</p></div>
     <div class="ctas"><a class="book" href="https://calendar.app.google/bsmnr5aoWXN63RsX7" target="_blank" rel="noopener">Book a call →</a><div class="email"><span id="em">felipe@ftventures.io</span><button id="copy" type="button">Copy</button></div></div>
   </div>
@@ -576,26 +606,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <h1>Investor track record</h1>
   <p class="sub">40+ early-stage investments since 2017, from frontier AI and fintech to consumer brands and deep tech.</p>
 
-  <div class="big">
+  <div class="big rv">
     <div><b>16×</b><span>Net TVPI</span></div>
     <div><b>51%</b><span>IRR</span></div>
   </div>
 
-  <div class="bench">
+  <div class="bench rv">
     <h2>Against the benchmarks</h2>
     <div class="bars">
-      <div class="bar me"><b>16×</b><i style="height:100%"></i></div>
-      <div class="bar"><b>3.1×</b><i style="height:19%"></i></div>
-      <div class="bar"><b>2.6×</b><i style="height:16%"></i></div>
-      <div class="bar"><b>2.4×</b><i style="height:15%"></i></div>
-      <div class="bar"><b>1.7×</b><i style="height:11%"></i></div>
-      <div class="bar"><b>0.8×</b><i style="height:5%"></i></div>
+      <div class="bar me" tabindex="0"><span class="tip">My portfolio · 16.0× net TVPI · 51% IRR</span><b>16×</b><i style="height:100%"></i></div>
+      <div class="bar" tabindex="0"><span class="tip">VC top decile · 3.1× TVPI · Carta</span><b>3.1×</b><i style="height:19%"></i></div>
+      <div class="bar" tabindex="0"><span class="tip">S&amp;P 500 · 2.6× total return · same period</span><b>2.6×</b><i style="height:16%"></i></div>
+      <div class="bar" tabindex="0"><span class="tip">VC top quartile · 2.4× TVPI · PitchBook</span><b>2.4×</b><i style="height:15%"></i></div>
+      <div class="bar" tabindex="0"><span class="tip">VC median · 1.7× TVPI · PitchBook</span><b>1.7×</b><i style="height:11%"></i></div>
+      <div class="bar" tabindex="0"><span class="tip">VC lower quartile · 0.8× TVPI · PitchBook</span><b>0.8×</b><i style="height:5%"></i></div>
     </div>
     <div class="labs"><span>My portfolio</span><span>VC top decile</span><span>S&amp;P 500</span><span>VC top quartile</span><span>VC median</span><span>VC lower quartile</span></div>
     <p class="fn">Net of fees. Benchmarks: Carta, PitchBook. TVPI and IRR to date; unrealised positions marked to last round.</p>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Selected returns</h2>
     <div class="rows">
       <div class="row"><div class="who"><a href="https://www.revolut.com" target="_blank" rel="noopener" class="rl"><img src="img/revolut.png" alt="Revolut"></a><small>Entry at £276M · 2017</small></div><div class="what">Global digital bank and financial super-app.</div><div class="num">155×</div></div>
@@ -609,7 +639,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <p class="fn">Personal angel investments. Entry valuations are the round valuation at the time of investment. Multiples are on my invested capital, net of SPV fees, carry and dilution from later rounds, so they’re lower than the change in company valuation. Largely unrealised, based on latest marks. Not an offer of any investment. Past performance is not a guide to future returns.</p>
   </div>
 
-  <div class="sec">
+  <div class="sec rv">
     <h2>Selected portfolio</h2>
     <div class="filters">
       <div id="fSector"><label>Sector</label></div>
@@ -624,14 +654,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <script>
 const portfolio = [
-  {name:"Revolut", sector:"Fintech", status:"Active", logo:"revolut", url:"https://www.revolut.com"},
-  {name:"Anthropic", sector:"AI", status:"Active", logo:"anthropic", url:"https://www.anthropic.com"},
-  {name:"OpenAI", sector:"AI", status:"Active", logo:"openai", url:"https://openai.com"},
+  {name:"Revolut", sector:"Fintech", status:"Active", logo:"revolut", url:"https://www.revolut.com", year:2017},
+  {name:"Anthropic", sector:"AI", status:"Active", logo:"anthropic", url:"https://www.anthropic.com", year:2024},
+  {name:"OpenAI", sector:"AI", status:"Active", logo:"openai", url:"https://openai.com", year:2024},
   {name:"Perplexity", sector:"AI", status:"Active", logo:"perplexity", url:"https://www.perplexity.ai"},
-  {name:"Neuralink", sector:"Deep tech", status:"Active", logo:"neuralink", url:"https://neuralink.com"},
-  {name:"SpaceX", sector:"Space", status:"Exited", logo:"spacex", url:"https://www.spacex.com"},
+  {name:"Neuralink", sector:"Deep tech", status:"Active", logo:"neuralink", url:"https://neuralink.com", year:2023},
+  {name:"SpaceX", sector:"Space", status:"Exited", logo:"spacex", url:"https://www.spacex.com", year:2022},
   {name:"Axiom Space", sector:"Space", status:"Active", logo:"axiom", url:"https://www.axiomspace.com"},
-  {name:"Moneybox", sector:"Fintech", status:"Exited", logo:"moneybox", url:"https://www.moneyboxapp.com"},
+  {name:"Moneybox", sector:"Fintech", status:"Exited", logo:"moneybox", url:"https://www.moneyboxapp.com", year:2020},
   {name:"Public.com", sector:"Fintech", status:"Active", logo:"public", url:"https://public.com"},
   {name:"Pacaso", sector:"Proptech", status:"Active", logo:"pacaso", url:"https://www.pacaso.com"},
   {name:"What3Words", sector:"Deep tech", status:"Active", logo:"what3words", url:"https://what3words.com"},
@@ -641,7 +671,7 @@ const portfolio = [
   {name:"Heura", sector:"Food & bev", status:"Active", logo:"heura", url:"https://www.heurafoods.com"},
   {name:"Honestly Tasty", sector:"Food & bev", status:"Active", logo:"honestlytasty", url:"https://honestlytasty.co.uk"},
   {name:"This!", sector:"Food & bev", status:"Active", logo:"this", url:"https://this.co"},
-  {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog", url:"https://www.differentdog.com"},
+  {name:"Different Dog", sector:"Consumer", status:"Active", logo:"differentdog", url:"https://www.differentdog.com", year:2020},
   {name:"Lick", sector:"Consumer", status:"Active", logo:"lick", url:"https://www.lick.com"},
   {name:"Bloomi", sector:"Consumer", status:"Active", logo:"bloomi", url:"https://thebloomi.com"},
 ];
@@ -654,16 +684,29 @@ function chips(host,list,get,set){
 }
 chips(document.getElementById("fSector"),sectors,()=>fs,v=>fs=v);
 chips(document.getElementById("fStatus"),statuses,()=>fst,v=>fst=v);
-function render(){
-  const host=document.getElementById("cards");host.innerHTML="";
-  const rows=portfolio.filter(p=>(fs==="All"||p.sector===fs)&&(fst==="All"||p.status===fst));
-  rows.forEach(p=>{const d=document.createElement("a");d.className="card";d.href=p.url;d.target="_blank";d.rel="noopener";
+let built=false;
+function buildCards(){
+  const host=document.getElementById("cards");
+  portfolio.forEach(p=>{const d=document.createElement("a");d.className="card";d.href=p.url;d.target="_blank";d.rel="noopener";d.dataset.sector=p.sector;d.dataset.status=p.status;
     d.innerHTML=(p.status==="Exited"?'<span class="tag">Exited</span>':'')+`<span class="lgw">`+(p.logo?`<img src="img/${p.logo}.png" alt="${p.name}">`:`<span class="co">${p.name}</span>`)+`</span>`+`<span class="sec">${p.sector}</span>`;
     host.appendChild(d);
     const im=d.querySelector("img");
     if(im){const fit=()=>{const r=im.naturalWidth/im.naturalHeight||3;const k=({perplexity:1.3,wonderschool:1.3,neuralink:1.4,spacex:1.35,openai:1.15,moneybox:1.15})[p.logo]||1;im.style.height=Math.max(18,Math.min(54*k,54/Math.sqrt(r)*k))+"px";if(k>1)im.style.maxWidth="90%";};im.complete?fit():im.addEventListener("load",fit);}
   });
-  document.getElementById("empty").hidden=rows.length>0;
+  built=true;
+}
+function render(){
+  if(!built)buildCards();
+  const cards=[...document.querySelectorAll("#cards .card")];
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const first=new Map(cards.map(c=>[c,c.getBoundingClientRect()]));
+  let n=0;
+  cards.forEach(c=>{const ok=(fs==="All"||c.dataset.sector===fs)&&(fst==="All"||c.dataset.status===fst);c.classList.toggle("out",!ok);c.hidden=!ok;if(ok)n++;});
+  document.getElementById("empty").hidden=n>0;
+  if(reduce)return;
+  cards.forEach(c=>{if(c.hidden)return;const f=first.get(c),l=c.getBoundingClientRect();const dx=f.left-l.left,dy=f.top-l.top;
+    if(f.width===0){c.animate([{opacity:0,transform:"scale(.96)"},{opacity:1,transform:"none"}],{duration:300,easing:"ease-out"});return;}
+    if(dx||dy)c.animate([{transform:`translate(${dx}px,${dy}px)`},{transform:"none"}],{duration:350,easing:"cubic-bezier(.2,.7,.2,1)"});});
 }
 render();
 
@@ -680,6 +723,30 @@ document.getElementById("copy").onclick=function(){
   navigator.clipboard.writeText(t).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy",1500);})
   .catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById("em"));const s=getSelection();s.removeAllRanges();s.addRange(r);});
 };
+/* ---- scroll reveal ---- */
+const rvIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rvIO.unobserve(e.target);}}),{rootMargin:"0px 0px -8% 0px",threshold:.08});
+document.querySelectorAll(".rv").forEach(el=>rvIO.observe(el));
+/* ---- count-up numbers ---- */
+const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function countUp(el){
+  const txt=el.textContent; const m=txt.match(/^(.*?)(\d[\d,]*(?:\.\d+)?)([^\d]*)$/); if(!m||reduceMotion)return;
+  const [_,pre,numS,suf]=m; const target=parseFloat(numS.replace(/,/g,"")); const dec=(numS.split(".")[1]||"").length; const comma=numS.includes(",");
+  const fmt=v=>{let t=v.toFixed(dec); if(comma)t=Number(t).toLocaleString("en-US",{minimumFractionDigits:dec,maximumFractionDigits:dec}); return pre+t+suf;};
+  const dur=1100, t0=performance.now(); el.style.fontVariantNumeric="tabular-nums";
+  (function step(now){const p=Math.min(1,(now-t0)/dur);const e=1-Math.pow(1-p,3);el.textContent=fmt(target*e);if(p<1)requestAnimationFrame(step);else el.textContent=txt;})(t0);
+}
+const cuIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){countUp(e.target);cuIO.unobserve(e.target);}}),{threshold:.6});
+document.querySelectorAll(".stat b,.big b,.cs-stats b,.row .num").forEach(el=>cuIO.observe(el));
+/* ---- benchmark chart draws on scroll ---- */
+const bars=document.querySelector(".bars");
+if(bars){new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){bars.classList.add("drawn");o.disconnect();}});},{threshold:.4}).observe(bars);}
+/* ---- magnetic CTA ---- */
+if(matchMedia("(hover:hover) and (pointer:fine)").matches && !reduceMotion){
+  document.querySelectorAll(".book").forEach(btn=>{const zone=btn.parentElement;
+    zone.addEventListener("mousemove",ev=>{const r=btn.getBoundingClientRect();const cx=r.left+r.width/2,cy=r.top+r.height/2;const dx=ev.clientX-cx,dy=ev.clientY-cy;const d=Math.hypot(dx,dy);const reach=140;
+      if(d<reach){const k=(1-d/reach)*0.35;btn.style.transform=`translate(${dx*k}px,${dy*k}px)`;}else btn.style.transform="";});
+    zone.addEventListener("mouseleave",()=>btn.style.transform="");});
+}
 </script>
 
 </body>
