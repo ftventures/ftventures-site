@@ -188,6 +188,8 @@ a.card:hover img,a.card:focus-visible img,#portfolio .row:hover img{filter:none;
 .fn{max-width:none}
 .row a.rl{display:inline-flex}
 .row a.rl:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+.row{grid-template-columns:200px 1fr auto;min-height:88px}.row .who small{white-space:nowrap;margin-top:6px}.row a.rl{height:28px;align-items:center}
+@media(max-width:600px){.row{grid-template-columns:1fr auto;min-height:0}.row .who small{white-space:normal}}
 .row img.lz{height:34px}
 .who2>a{display:inline-flex;flex:none}
 .who2>a img{width:44px;height:44px;border-radius:50%}
