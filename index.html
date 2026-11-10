@@ -553,8 +553,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div class="ipo-r" data-v="1.7" data-n="1490" data-nl="$1.49tn" data-x="~880x"><span class="n"><i></i>Tesla <small>2010</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">~$1.7bn</span><em class="ipo-x"></em></span></div></div>
         <div class="ipo-r" data-v="104" data-n="1640" data-nl="$1.64tn" data-x="~16x"><span class="n"><i class="no"></i>Facebook <small>2012</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">~$104bn</span><em class="ipo-x"></em></span></div></div>
         <div class="ipo-r big" data-v="2200" data-n="1930" data-nl="$1.93tn" data-x="~0.9x"><span class="n"><i></i>SpaceX <small>2026</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">~$2.2tn</span><em class="ipo-x"></em></span></div></div>
-        <div class="ipo-r est" data-v="965"><span class="n"><i></i>Anthropic <small>private</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">$965bn</span><em class="ipo-x"></em></span></div></div>
-        <div class="ipo-r est" data-v="1250"><span class="n"><i></i>OpenAI <small>private</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">$1.25tn</span><em class="ipo-x"></em></span></div></div>
+        <div class="ipo-r est" data-v="1400" data-note="top of IPO range"><span class="n"><i></i>Anthropic <small>2026</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">~$1.4tn</span><em class="ipo-x"></em></span></div></div>
+        <div class="ipo-r est" data-v="1250" data-note="latest round"><span class="n"><i></i>OpenAI <small>private</small></span><div class="ipo-t"><span class="ipo-b"></span><span class="ipo-v"><span class="vv">$1.25tn</span><em class="ipo-x"></em></span></div></div>
       </div>
       <p class="quote">Public investors once bought Amazon and Nvidia while they were small and made over a thousand times their money. Today’s leaders do that growth in private, and list once most of it is done.</p>
     </div>
@@ -567,7 +567,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <p class="big">Wait for the IPO and you buy after the compounding. Fund I buys in the years before it.</p>
     </aside>
   </div>
-  <p class="fn">● Invested personally (Tesla held 2016–24, 25x). Anthropic and OpenAI are private: dashed bars show the latest funding-round valuation (May and Nov 2026). Today: market capitalisation at 9 Nov 2026. “Since IPO” compares market value today with first-day value; it is not a shareholder return.</p>
+  <p class="fn">● Invested personally (Tesla held 2016–24, 25x). Anthropic and OpenAI are not yet listed. Anthropic: top of the IPO price range announced 10 Nov 2026, fully diluted. OpenAI: valuation at its Nov 2026 funding round. Neither is a forecast. Today: market capitalisation at 9 Nov 2026. “Since IPO” compares market value today with first-day value; it is not a shareholder return.</p>
 </div></section>
 
 <!-- 2 STRATEGY: curve -->
@@ -907,7 +907,7 @@ document.addEventListener("pointermove",e=>{const el=e.target.closest&&e.target.
 const ipo=$("#ipo"),rows=$$("#ipo .ipo-r");rows.forEach(r=>r.dataset.il=$(".vv",r).textContent);
 function scale(now){const MAX=now?4310:2200;ipo.classList.toggle("now",now);
   rows.forEach(r=>{const listed=!!r.dataset.n,v=now&&listed?+r.dataset.n:+r.dataset.v;$(".ipo-b",r).style.setProperty("--w",(v/MAX*100).toFixed(2));
-    $(".vv",r).textContent=now&&listed?r.dataset.nl:r.dataset.il;$(".ipo-x",r).textContent=(!now&&!listed)?"latest round":now?(listed?r.dataset.x+" since IPO":"latest round, still private"):"";});
+    $(".vv",r).textContent=now&&listed?r.dataset.nl:r.dataset.il;$(".ipo-x",r).textContent=(!now&&!listed)?r.dataset.note:now?(listed?r.dataset.x+" since IPO":r.dataset.note+", not yet listed"):"";});
   $("#ipoLab").textContent=now?"Market value today":"Market value on the first day of trading";
   $("#scIpo").setAttribute("aria-pressed",!now);$("#scNow").setAttribute("aria-pressed",now);}
 $("#scIpo").onclick=()=>scale(false);$("#scNow").onclick=()=>scale(true);scale(false);
