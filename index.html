@@ -101,11 +101,15 @@ nav .btn{padding:9px 16px;font-size:14px;flex:none}
 .hstats .lab{color:var(--mist);margin-bottom:6px}
 .hnote{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--mist);margin-top:14px;line-height:1.5}
 @media(max-width:900px){.hnote{grid-column:1/-1;margin-top:4px}}
-.strip{border-top:1px solid rgba(253,247,230,.13);padding-block:24px 28px}
-.strip .wrap{display:flex;align-items:center;gap:38px;flex-wrap:wrap;row-gap:18px}
-.strip img{height:22px;width:auto;max-width:130px;object-fit:contain;filter:brightness(0) invert(1);opacity:.7;transition:opacity .25s,transform .25s}
-.strip img.t{height:32px}
-.strip a:hover img{opacity:1;transform:translateY(-2px)}
+.strip{border-top:1px solid rgba(253,247,230,.13);padding-block:26px 30px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.strip-t{display:flex;align-items:center;gap:72px;width:max-content;animation:strip 48s linear infinite}
+.strip:hover .strip-t,.strip:focus-within .strip-t{animation-play-state:paused}
+.strip a{flex:none;display:flex}
+.strip img{width:auto;max-width:170px;object-fit:contain;filter:brightness(0) invert(1);opacity:.7;transition:opacity .25s}
+.strip a:hover img{opacity:1}
+@keyframes strip{to{transform:translateX(calc(-50% - 36px))}}
+@media(max-width:600px){.strip-t{gap:48px;animation-duration:36s}}
+@media(prefers-reduced-motion:reduce){.strip-t{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:20px;padding:0 16px}.strip-t a[aria-hidden]{display:none}}
 .js .hero.go h1 .w{animation:wUp .9s cubic-bezier(.2,.75,.2,1) both;animation-delay:calc(.1s + var(--k)*70ms)}
 .js .hero.go .fu{animation:fUp .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d,.6s)}
 @keyframes wUp{from{transform:translateY(.45em);opacity:0;filter:blur(6px)}to{transform:none;opacity:1;filter:none}}
@@ -529,14 +533,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <p class="hnote fu" style="--d:.9s">Personal investments. Unaudited and largely unrealised.</p>
     </div>
   </div>
-  <div class="strip"><div class="wrap">
-    <a href="https://www.revolut.com" target="_blank" rel="noopener"><img src="img/revolut.png" alt="Revolut"></a>
-    <a href="https://www.anthropic.com" target="_blank" rel="noopener"><img src="img/anthropic.png" alt="Anthropic" style="height:15px"></a>
-    <a href="https://openai.com" target="_blank" rel="noopener"><img src="img/openai.png" alt="OpenAI" class="t" style="height:28px"></a>
-    <a href="https://www.spacex.com" target="_blank" rel="noopener"><img src="img/spacex.png" alt="SpaceX" style="height:15px"></a>
-    <a href="https://neuralink.com" target="_blank" rel="noopener"><img src="img/neuralink.png" alt="Neuralink" class="t"></a>
-    <a href="https://www.perplexity.ai" target="_blank" rel="noopener"><img src="img/perplexity.png" alt="Perplexity" class="t" style="height:28px"></a>
-  </div></div>
+  <div class="strip"><div class="strip-t"><a href="https://www.revolut.com" target="_blank" rel="noopener"><img src="img/revolut.png" alt="Revolut" style="height:22px"></a><a href="https://www.anthropic.com" target="_blank" rel="noopener"><img src="img/anthropic.png" alt="Anthropic" style="height:15px"></a><a href="https://openai.com" target="_blank" rel="noopener"><img src="img/openai.png" alt="OpenAI" style="height:28px"></a><a href="https://www.perplexity.ai" target="_blank" rel="noopener"><img src="img/perplexity.png" alt="Perplexity" style="height:28px"></a><a href="https://higgsfield.ai" target="_blank" rel="noopener"><img src="img/higgsfield.png" alt="Higgsfield" style="height:24px"></a><a href="https://www.1x.tech" target="_blank" rel="noopener"><img src="img/1x.png" alt="1X" style="height:28px"></a><a href="https://neuralink.com" target="_blank" rel="noopener"><img src="img/neuralink.png" alt="Neuralink" style="height:32px"></a><a href="https://www.spacex.com" target="_blank" rel="noopener"><img src="img/spacex.png" alt="SpaceX" style="height:15px"></a><a href="https://www.axiomspace.com" target="_blank" rel="noopener"><img src="img/axiom.png" alt="Axiom Space" style="height:28px"></a><a href="https://www.revolut.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/revolut.png" alt="" style="height:22px"></a><a href="https://www.anthropic.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/anthropic.png" alt="" style="height:15px"></a><a href="https://openai.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/openai.png" alt="" style="height:28px"></a><a href="https://www.perplexity.ai" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/perplexity.png" alt="" style="height:28px"></a><a href="https://higgsfield.ai" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/higgsfield.png" alt="" style="height:24px"></a><a href="https://www.1x.tech" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/1x.png" alt="" style="height:28px"></a><a href="https://neuralink.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/neuralink.png" alt="" style="height:32px"></a><a href="https://www.spacex.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/spacex.png" alt="" style="height:15px"></a><a href="https://www.axiomspace.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="img/axiom.png" alt="" style="height:28px"></a></div></div>
 </header>
 
 <!-- 1 THESIS -->
