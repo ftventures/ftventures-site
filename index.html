@@ -300,6 +300,7 @@ nav .btn{padding:9px 16px;font-size:14px;flex:none}
 .ai-m{display:flex;align-items:center;gap:12px;min-width:0}
 .ai-m i{height:12px;background:var(--navy);width:calc(var(--w)*1%);min-width:4px;transition:width 1.2s cubic-bezier(.2,.7,.2,1);max-width:calc(100% - 70px)}
 .ai-m b{font-family:var(--display);font-weight:600;font-size:26px;white-space:nowrap}
+.ai-m b sup{font-size:.42em;font-weight:500;vertical-align:super;margin-left:3px;color:var(--slate)}
 .ai-r.cost .ai-m i{background:var(--mist)}.ai-r.cost .ai-m b{color:var(--mist)}
 .ai-r.top .ai-m i{background:var(--gold)}
 .js .rv:not(.in) .ai-m i{width:0!important}
@@ -606,7 +607,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
     <aside class="rec" id="rec">
       <p class="lab">What my record says</p>
-      <div class="num" id="recNum">11.9x</div>
+      <div class="num" id="recNum">12.3x</div>
       <p id="recCap">Gross, on 18 Series B and later entries</p>
       <div class="seg" role="group" aria-label="Include or exclude Revolut"><button type="button" id="recAll" aria-pressed="true">All 18 deals</button><button type="button" id="recEx" aria-pressed="false">Without Revolut</button></div>
       <p class="foot">Take out the best investment entirely and the late-stage record still stands on its own.</p>
@@ -625,9 +626,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <div class="vt-big"><div><span class="num a">17x</span><span class="lab">Gross TVPI</span></div><div><span class="num b">15.7x</span><span class="lab">Net TVPI</span></div><div><span class="num b" data-cu="52" data-suf="%">52%</span><span class="lab">Gross IRR</span></div></div>
       <div class="vt-kv" style="grid-template-columns:1fr;border-bottom:0;padding-bottom:0"><div><span class="lab">Investments</span><b>18</b></div></div>
     </article>
-    <article class="vt" data-g="4.4" data-n="3.9" data-tq="1.6">
+    <article class="vt" data-g="4.6" data-n="4.1" data-tq="1.6">
       <div class="vt-t"><h3>Vintage II</h3><span>2021–26</span></div>
-      <div class="vt-big"><div><span class="num a">4.4x</span><span class="lab">Gross TVPI</span></div><div><span class="num b">3.9x</span><span class="lab">Net TVPI</span></div><div><span class="num b" data-cu="40" data-suf="%">40%</span><span class="lab">Gross IRR</span></div></div>
+      <div class="vt-big"><div><span class="num a">4.6x</span><span class="lab">Gross TVPI</span></div><div><span class="num b">4.1x</span><span class="lab">Net TVPI</span></div><div><span class="num b" data-cu="42" data-suf="%">42%</span><span class="lab">Gross IRR</span></div></div>
       <div class="vt-kv" style="grid-template-columns:1fr;border-bottom:0;padding-bottom:0"><div><span class="lab">Investments</span><b>23</b></div></div>
     </article>
   </div>
@@ -644,14 +645,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
   <div class="wn6 st">
     <a href="https://www.revolut.com" target="_blank" rel="noopener"><img src="img/revolut.png" alt="Revolut"><div class="num">11x</div><span>2021, Secondary</span></a>
+    <a href="https://neuralink.com" target="_blank" rel="noopener"><img src="img/neuralink.png" alt="Neuralink" style="height:34px;margin:-7px 0 -9px"><div class="num">8x</div><span>2023, Late stage</span></a>
     <a href="https://openai.com" target="_blank" rel="noopener"><img src="img/openai.png" alt="OpenAI"><div class="num">5x</div><span>2024, Late stage</span></a>
     <a href="https://www.differentdog.com" target="_blank" rel="noopener"><img src="img/differentdog.png" alt="Different Dog"><div class="num">5x</div><span>2020, Seed</span></a>
     <a href="https://www.spacex.com" target="_blank" rel="noopener"><img src="img/spacex.png" alt="SpaceX" style="height:13px;margin:3.5px 0"><div class="num">4x</div><span>2022, Late stage</span><em>Exited 2026</em></a>
-    <a href="https://www.yourheights.com" target="_blank" rel="noopener"><img src="img/heights.png" alt="Heights"><div class="num">3x</div><span>2021, Seed</span></a>
-    <a href="https://www.moneyboxapp.com" target="_blank" rel="noopener"><img src="img/moneybox.png" alt="Moneybox"><div class="num">3x</div><span>2020, Series C</span><em>Part-exited 2024</em></a>
+        <a href="https://www.moneyboxapp.com" target="_blank" rel="noopener"><img src="img/moneybox.png" alt="Moneybox"><div class="num">3x</div><span>2020, Series C</span><em>Part-exited 2024</em></a>
   </div>
   <p class="lede" style="font-size:17px;margin-top:26px">Not every investment worked. Most write-offs were early-stage consumer and food brands, which is why we invest later.</p>
-  <p class="fn">A selection, not the full record. Gross MOIC, 27 Oct 2026. *Anthropic valuation up ~77x since entry; MOIC reflects dilution.</p>
+  <p class="fn">A selection, not the full record. Gross MOIC, 27 Oct 2026. *Anthropic valuation up ~77x since entry; MOIC reflects dilution. Neuralink marked at a recent secondary-market valuation; unaudited.</p>
 </div></section>
 
 <!-- 6 CONVICTION -->
@@ -674,7 +675,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <button class="flip" type="button" aria-pressed="false"><span class="flip-in">
         <span class="face then"><span class="lab"><span>Then</span></span>Months after its board crisis, with senior departures and open doubts about its lead.<span class="tap">Turn to now ↻</span></span>
         <span class="face now"><span class="lab"><span>Now</span></span>ChatGPT is the most-used AI assistant in the world.<span class="tap">Back to then ↻</span></span></span></button>
-      <div class="num">5.3x</div></div>
+      <div class="num">5x</div></div>
   </div>
   <p class="motto">Conviction before consensus: back the leader while it is still debated, then size in.</p>
   <p class="fn">Gross MOIC, 27 Oct 2026. Anthropic MOIC reflects dilution.</p>
@@ -713,18 +714,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <!-- 8 AI -->
 <section class="s" id="ai" style="padding-top:0"><div class="wrap rv">
-  <p class="eye">AI portfolio, 2024–26</p>
-  <div class="vt-head"><h2>Frontier AI, backed before the <span class="au">valuation inflection</span></h2>
-    <div style="text-align:right"><div class="num" style="font-size:clamp(56px,7vw,88px);color:var(--gold-d)" data-cu="9.8" data-suf="x" data-dec="1">9.8x</div><p class="lab" style="margin-top:6px">Gross MOIC across 4 AI positions</p></div></div>
+  <p class="eye">Frontier tech, 2022–26</p>
+  <div class="vt-head"><h2>Frontier tech, backed before the <span class="au">valuation inflection</span></h2>
+    <div style="text-align:right"><div class="num" style="font-size:clamp(56px,7vw,88px);color:var(--gold-d)" data-cu="9" data-suf="x">9x</div><p class="lab" style="margin-top:6px">Gross MOIC across 6 positions</p></div></div>
   <div class="ai">
     <div class="ai-r ai-h"><span>Company</span><span>Entry</span><span>Gross MOIC</span></div>
-    <div class="ai-r top"><img src="img/anthropic.png" alt="Anthropic" style="height:16px"><span class="v e">Sep 2024</span><div class="ai-m"><i style="--w:100"></i><b>26x*</b></div></div>
-    <div class="ai-r"><img src="img/openai.png" alt="OpenAI" class="t"><span class="v e">Apr 2024</span><div class="ai-m"><i style="--w:20.4"></i><b>5.3x</b></div></div>
-    <div class="ai-r"><img src="img/perplexity.png" alt="Perplexity" class="t"><span class="v e">Dec 2024</span><div class="ai-m"><i style="--w:6.2"></i><b>1.6x</b></div></div>
-    <div class="ai-r cost"><img src="img/1x.png" alt="1X" class="t"><span class="v e">Jun 2026</span><div class="ai-m"><i style="--w:3.8"></i><b>1.0x</b></div></div>
-    <div class="ai-r cost"><img src="img/higgsfield.png" alt="Higgsfield"><span class="v e">Nov 2026</span><div class="ai-m"><i style="--w:3.8"></i><b>1.0x</b></div></div>
+    <div class="ai-r top"><img src="img/anthropic.png" alt="Anthropic" style="height:16px"><span class="v e">Sep 2024</span><div class="ai-m"><i style="--w:100"></i><b>26x<sup>(1)</sup></b></div></div>
+    <div class="ai-r"><img src="img/neuralink.png" alt="Neuralink" style="height:46px"><span class="v e">Aug 2023</span><div class="ai-m"><i style="--w:30.8"></i><b>8x<sup>(2)</sup></b></div></div>
+    <div class="ai-r"><img src="img/openai.png" alt="OpenAI" class="t"><span class="v e">Apr 2024</span><div class="ai-m"><i style="--w:19.2"></i><b>5x</b></div></div>
+    <div class="ai-r"><img src="img/spacex.png" alt="SpaceX" style="height:14px"><span class="v e">2022</span><div class="ai-m"><i style="--w:15.4"></i><b>4x<sup>(3)</sup></b></div></div>
+    <div class="ai-r"><img src="img/perplexity.png" alt="Perplexity" class="t"><span class="v e">Dec 2024</span><div class="ai-m"><i style="--w:7.7"></i><b>2x</b></div></div>
+    <div class="ai-r cost"><img src="img/1x.png" alt="1X" class="t"><span class="v e">Jun 2026</span><div class="ai-m"><i style="--w:3.8"></i><b>1x</b></div></div>
+    <div class="ai-r cost"><img src="img/higgsfield.png" alt="Higgsfield"><span class="v e">Nov 2026</span><div class="ai-m"><i style="--w:3.8"></i><b>1x</b></div></div>
   </div>
-  <p class="fn">Gross MOIC, 27 Oct 2026. *Valuation up ~77x; MOIC reflects dilution. 1.0x = 2026 entry, at cost. The leading AI platforms stay private for longer; accessed via secondary and co-investment vehicles.</p>
+  <p class="fn">Gross MOIC, 27 Oct 2026, rounded. (1) Anthropic valuation up ~77x; MOIC reflects dilution. (2) Neuralink marked at a recent secondary-market valuation; unaudited. (3) SpaceX exited 2026. 1x = 2026 entry, at cost; Higgsfield is after the mark date and not in the 9x. The leading private companies stay private for longer; accessed via secondary and co-investment vehicles.</p>
 </div></section>
 
 <!-- 9 LESSONS -->
@@ -749,7 +752,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <p class="role">Founder &amp; Managing Partner. Investor, operator and founder</p>
       <p class="bio">Over a decade of investing, seed to pre-IPO. M&amp;A at BofA Merrill Lynch, growth VC at Lepe, CFO through two exits and co-founder of Lazare Farms.</p>
       <div class="io">
-        <div><span class="lab">Investor</span><div class="c"><b class="num">17x</b><span>Gross multiple, 2017–20</span></div><div class="c"><b class="num">11.9x</b><span>On Series B+ entries</span></div><div class="c"><b class="num">40+</b><span>Investments</span></div></div>
+        <div><span class="lab">Investor</span><div class="c"><b class="num">17x</b><span>Gross multiple, 2017–20</span></div><div class="c"><b class="num">12.3x</b><span>On Series B+ entries</span></div><div class="c"><b class="num">40+</b><span>Investments</span></div></div>
         <div class="op"><span class="lab">Operator</span><div class="c"><b class="num">$18bn</b><span>M&amp;A advised</span></div><div class="c"><b class="num">$1bn</b><span>Equity transactions</span></div><div class="c"><b class="num">2</b><span>Exits as CFO</span></div></div>
       </div>
       <p class="lab" style="margin-top:26px">Where I’ve worked, built and trained</p>
@@ -918,7 +921,7 @@ $("#scIpo").onclick=()=>scale(false);$("#scNow").onclick=()=>scale(true);scale(f
   const Z=[
    {to:.433,lab:"Too early for us",t:"Early stage",p:"Seed and Series A. The category is undecided and most companies fail. This is where most of my write-offs came from, so we stay out.",ex:[]},
    {to:.66,lab:"Entry point one",t:"Rising leaders",p:"The category is still being decided. We buy when the front-runner is clear to us but not yet priced in. The biggest upside.",ex:[["192x","Revolut 2017"],["26x","Anthropic 2024"]]},
-   {to:.9,lab:"Entry point two",t:"Proven leaders",p:"The winner is clear and years of private growth remain. Less risk, and still several times the money before it lists.",ex:[["11x","Revolut 2021"],["5.3x","OpenAI 2024"]]},
+   {to:.9,lab:"Entry point two",t:"Proven leaders",p:"The winner is clear and years of private growth remain. Less risk, and still several times the money before it lists.",ex:[["11x","Revolut 2021"],["5x","OpenAI 2024"]]},
    {to:1.01,lab:"Too late for us",t:"Public markets",p:"Wait for the IPO and you buy after the compounding. Public investors only get on here.",ex:[]}];
   const panel=$("#cvPanel"),range=$("#cvRange"),svg=$("#cv");let zi=-1;
   function set(v){const x=v/100,cx=px(x),cy=py(x);
@@ -941,7 +944,7 @@ $("#scIpo").onclick=()=>scale(false);$("#scNow").onclick=()=>scale(true);scale(f
 /* 3. record toggle */
 (function(){const n=$("#recNum"),c=$("#recCap"),box=$("#rec");
   function tw(from,to){if(reduce){n.textContent=to.toFixed(1)+"x";return;}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/700),e=1-Math.pow(1-p,3);n.textContent=(from+(to-from)*e).toFixed(1)+"x";if(p<1)requestAnimationFrame(f);})(t0);}
-  function set(ex){const cur=parseFloat(n.textContent);tw(cur,ex?5.6:11.9);c.textContent=ex?"The same 18 deals, excluding Revolut entirely":"Gross, on 18 Series B and later entries";box.classList.toggle("ex",ex);
+  function set(ex){const cur=parseFloat(n.textContent);tw(cur,ex?6.0:12.3);c.textContent=ex?"The same 18 deals, excluding Revolut entirely":"Gross, on 18 Series B and later entries";box.classList.toggle("ex",ex);
     $("#recAll").setAttribute("aria-pressed",!ex);$("#recEx").setAttribute("aria-pressed",ex);}
   $("#recAll").onclick=()=>set(false);$("#recEx").onclick=()=>set(true);})();
 
