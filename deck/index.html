@@ -53,14 +53,15 @@ button[disabled]{opacity:.7;cursor:wait}
   <a class="logo" href="/" aria-label="FT Ventures"><svg viewBox="0 0 281 153" aria-hidden="true"><path fill="#fdf7e6" d="M0 0H180L140 40H0ZM0 56H122L82 96H40V153H0ZM145 56H185V153H145Z"/><path fill="#cbb682" d="M197 0H281L241 40H157Z"/></svg>Ventures</a>
   <p class="eye">Private &amp; confidential</p>
   <h1>Fund I <em>deck</em></h1>
-  <p class="sub">Enter the password you were given to open the deck.</p>
+  <p class="sub">Enter your email and the password you were given to open the deck.</p>
   <form id="f" autocomplete="off">
+   <div id="efld"><input id="em" type="email" placeholder="Work email" aria-label="Email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" required></div>
    <div id="fld"><input id="pw" type="password" placeholder="Password" aria-label="Password" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
    <button type="submit" id="go">Open deck</button>
    <p class="err" id="err" role="alert"></p>
   </form>
   <p class="help">No password? Email <b>felipe@ftventures.io</b></p>
-  <p class="fine">Shared privately with professional investors. Not an offer, solicitation or invitation to invest. FT Ventures is not yet a fund or a legal entity.</p>
+  <p class="fine">Your email is shared only with FT Ventures, to follow up on the deck. <a href="/privacy/" style="color:inherit">Privacy</a>.<br>Shared privately with professional investors. Not an offer, solicitation or invitation to invest. FT Ventures is not yet a fund or a legal entity.</p>
  </div>
 </main>
 <div class="viewer" id="viewer">
@@ -83,12 +84,15 @@ async function unlock(pw){
   return crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
 }
 $('f').addEventListener('submit',async e=>{
-  e.preventDefault();const pw=$('pw').value.trim().toLowerCase();if(!pw)return;
+  e.preventDefault();const em=$('em').value.trim(),pw=$('pw').value.trim().toLowerCase();
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){const f=$('efld');f.classList.remove('bad');void f.offsetWidth;f.classList.add('bad');$('err').textContent='Please enter a valid email.';return;}
+  if(!pw)return;
   const go=$('go'),err=$('err'),fld=$('fld');go.disabled=true;go.textContent='Opening…';err.textContent='';
   try{
     const pdf=await unlock(pw);
     const url=URL.createObjectURL(new Blob([pdf],{type:'application/pdf'}));
     $('dl').href=url;$('full').href=url;
+    log(em);
     await render(new Uint8Array(pdf.slice(0)));
     document.body.classList.add('open');
   }catch(x){
@@ -96,6 +100,12 @@ $('f').addEventListener('submit',async e=>{
     err.textContent=x.message==='fetch'?'The deck could not be loaded. Please try again.':'That password isn’t right. Check the message it came in.';
   }finally{go.disabled=false;go.textContent='Open deck';}
 });
+function log(em){
+  try{localStorage.setItem('ftv_em',em)}catch(_){}
+  fetch('https://formspree.io/f/xnpdbnvp',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({email:em,_subject:'Fund I deck opened by '+em,event:'Opened Fund I deck',opened_at:new Date().toISOString(),device:navigator.userAgent})}).catch(()=>{});
+}
+try{const v=localStorage.getItem('ftv_em');if(v)$('em').value=v;}catch(_){}
 async function render(data){
   const doc=await pdfjsLib.getDocument({data}).promise,box=$('pages');box.innerHTML='';
   const first=await doc.getPage(1),vp1=first.getViewport({scale:1});
@@ -106,7 +116,7 @@ async function render(data){
   for(let i=1;i<=doc.numPages;i++){const d=document.createElement('div');d.className='pg';d.dataset.n=i;d.style.aspectRatio=vp1.width+'/'+vp1.height;box.appendChild(d);io.observe(d);}
   const n=document.createElement('p');n.className='cnt';n.textContent=doc.numPages+' pages · Private & confidential';box.appendChild(n);
 }
-$('pw').focus();
+($('em').value?$('pw'):$('em')).focus();
 </script>
 </body>
 </html>
