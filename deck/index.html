@@ -2,15 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>FT Ventures – Fund I deck</title>
-<meta http-equiv="refresh" content="0; url=/deck/FT_Ventures_Fund_I.pdf">
+<title>FT Ventures · Fund I deck</title>
 <link rel="icon" href="/img/favicon.png">
-<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0e1f3c;color:#fdf8e7;font-family:Georgia,serif;text-align:center;padding:24px}a{color:#cbb98a}</style>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{--navy:#0d1f3c;--deep:#081428;--cream:#fdf7e6;--gold:#cbb682;--mist:#a9b4c7;--dim:#6f7e98;--line:rgba(203,182,130,.25);color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:radial-gradient(120% 90% at 50% 0%,#13284b 0%,var(--navy) 45%,var(--deep) 100%) fixed;color:var(--cream);font:16px/1.6 Outfit,system-ui,sans-serif}
+.gate{min-height:100%;display:flex;align-items:center;justify-content:center;padding-block:40px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.card{width:100%;max-width:420px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:22px;color:var(--cream);text-decoration:none}
+.logo svg{width:52px;height:auto}
+.eye{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:44px 0 10px}
+h1{font-weight:500;font-size:34px;line-height:1.15;margin:0 0 10px}
+h1 em{font-family:Lora,Georgia,serif;font-weight:400;color:var(--gold)}
+.sub{color:var(--mist);font-size:15px;margin:0 0 30px}
+form{display:flex;flex-direction:column;gap:12px}
+input{width:100%;font:inherit;font-size:16px;color:var(--cream);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:15px 16px;outline:none;transition:border-color .2s,background .2s;letter-spacing:.04em}
+input::placeholder{color:var(--dim);letter-spacing:0}
+input:focus{border-color:var(--gold);background:rgba(255,255,255,.07)}
+.bad input{border-color:#d98a7a;animation:sh .35s}
+@keyframes sh{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+button,.btn{font:inherit;font-weight:600;font-size:15px;border:0;background:var(--gold);color:var(--navy);padding:15px;cursor:pointer;text-decoration:none;transition:filter .2s}
+button:hover,.btn:hover{filter:brightness(1.07)}
+button[disabled]{opacity:.7;cursor:wait}
+.err{min-height:20px;font-size:13px;color:#e3a597;margin:2px 0 0}
+.help{font-size:14px;color:var(--mist);margin-top:26px}
+.help b{color:var(--cream);font-weight:500;user-select:all}
+.fine{font-family:'DM Mono',monospace;font-size:10.5px;line-height:1.7;color:var(--dim);margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
+.viewer{display:none;position:fixed;inset:0;flex-direction:column;background:var(--deep)}
+.open .gate{display:none}.open .viewer{display:flex}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));padding-top:max(10px,env(safe-area-inset-top,0px));border-bottom:1px solid var(--line)}
+.bar .logo{font-size:17px}.bar .logo svg{width:38px}
+.acts{display:flex;gap:8px}
+.acts .btn,.acts button{font-size:13px;padding:9px 14px}
+.acts .ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
+iframe{flex:1;width:100%;border:0;background:#fff}
+</style>
 </head>
 <body>
-<p>Opening the FT Ventures Fund I deck…<br><br><a href="/deck/FT_Ventures_Fund_I.pdf">Tap here if it doesn’t open</a></p>
-<script>location.replace('/deck/FT_Ventures_Fund_I.pdf');</script>
+<main class="gate">
+ <div class="card">
+  <a class="logo" href="/" aria-label="FT Ventures"><svg viewBox="0 0 281 153" aria-hidden="true"><path fill="#fdf7e6" d="M0 0H180L140 40H0ZM0 56H122L82 96H40V153H0ZM145 56H185V153H145Z"/><path fill="#cbb682" d="M197 0H281L241 40H157Z"/></svg>Ventures</a>
+  <p class="eye">Private &amp; confidential</p>
+  <h1>Fund I <em>deck</em></h1>
+  <p class="sub">Enter the password you were given to open the deck.</p>
+  <form id="f" autocomplete="off">
+   <div id="fld"><input id="pw" type="password" placeholder="Password" aria-label="Password" autocapitalize="off" autocorrect="off" spellcheck="false"></div>
+   <button type="submit" id="go">Open deck</button>
+   <p class="err" id="err" role="alert"></p>
+  </form>
+  <p class="help">No password? Email <b>felipe@ftventures.io</b></p>
+  <p class="fine">Shared privately with professional investors. Not an offer, solicitation or invitation to invest. FT Ventures is not yet a fund or a legal entity.</p>
+ </div>
+</main>
+<div class="viewer" id="viewer">
+ <div class="bar">
+  <a class="logo" href="/" aria-label="FT Ventures"><svg viewBox="0 0 281 153" aria-hidden="true"><path fill="#fdf7e6" d="M0 0H180L140 40H0ZM0 56H122L82 96H40V153H0ZM145 56H185V153H145Z"/><path fill="#cbb682" d="M197 0H281L241 40H157Z"/></svg>Ventures</a>
+  <div class="acts"><a class="btn ghost" id="full" target="_blank">Full screen</a><a class="btn" id="dl" download="FT_Ventures_Fund_I.pdf">Download</a></div>
+ </div>
+ <iframe id="frame" title="FT Ventures Fund I deck"></iframe>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let blob=null;
+async function unlock(pw){
+  if(!blob){const r=await fetch('/deck/deck.bin',{cache:'no-store'});if(!r.ok)throw new Error('fetch');blob=new Uint8Array(await r.arrayBuffer());}
+  const salt=blob.slice(0,16),iv=blob.slice(16,28),ct=blob.slice(28);
+  const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
+  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:600000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+  return crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
+}
+$('f').addEventListener('submit',async e=>{
+  e.preventDefault();const pw=$('pw').value.trim().toLowerCase();if(!pw)return;
+  const go=$('go'),err=$('err'),fld=$('fld');go.disabled=true;go.textContent='Opening…';err.textContent='';
+  try{
+    const pdf=await unlock(pw);
+    const url=URL.createObjectURL(new Blob([pdf],{type:'application/pdf'}));
+    $('frame').src=url;$('dl').href=url;$('full').href=url;document.body.classList.add('open');
+  }catch(x){
+    fld.classList.remove('bad');void fld.offsetWidth;fld.classList.add('bad');
+    err.textContent=x.message==='fetch'?'The deck could not be loaded. Please try again.':'That password isn’t right. Check the message it came in.';
+  }finally{go.disabled=false;go.textContent='Open deck';}
+});
+$('pw').focus();
+</script>
 </body>
 </html>
